@@ -9,7 +9,6 @@ phases:
       - echo nothing to do know
 artifacts:
   files:
-    - index.html
-    - favicon.ico
-    - styles/main.css
-    - images/*
+    - browserTest/*
+    - public/*
+    - src/*

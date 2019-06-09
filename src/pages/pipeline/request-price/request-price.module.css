@@ -1,0 +1,70 @@
+.grid {
+  padding: 1em 0.5em !important;
+  width: 100% !important;
+  margin: 0 !important;
+}
+.segment {
+  width: 100% !important;
+  border: none !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+}
+.breadRow {
+  padding: 0 !important;
+  width: 100% !important;
+}
+.header {
+  color: black !important;
+  font-size: 2.5em !important;
+}
+.headerRow {
+  margin-top: 2em !important;
+  margin-bottom: 1.5em !important;
+  padding: 0 !important;
+  width: 100% !important;
+}
+.headerLabel {
+  background-color: white !important;
+}
+.tooltipIcon {
+  color: #1205ff !important;
+  font-size: 2.2em !important;
+}
+.tooltipDiv {
+  background-color: white !important;
+}
+.tooltipText {
+  color: white !important;
+}
+.priceRow {
+  text-align: center !important;
+  margin-bottom: 2em !important;
+  padding: 0 !important;
+  width: 100% !important;
+}
+.input {
+  font-size: 7.5em !important;
+}
+.priceIcon {
+  font-size: 0.8em !important;
+  color: rgba(0,0,0,.87) !important;
+}
+.button {
+  width: 100% !important;
+  margin: 0 !important;
+  background-color: #1205ff !important;
+  color: white !important;
+  box-shadow: 0px 14px 10px -10px rgba(0,0,0,0.4) !important;
+}
+.buttonRow {
+  margin-top: 2em !important;
+  padding: 0 !important;
+  width: 100% !important;
+  text-align: center !important;
+}
+.popupIcon {
+  color: #1205ff !important;
+  box-shadow: 0 0 0 0.1em #0e42ff inset !important;
+  font-size: 0.4em !important;
+  margin-top: -3em !important;
+}

@@ -1,0 +1,25 @@
+.grid {
+  padding: 1em 0.5em !important;
+  width: 100% !important;
+  margin: 0 !important;
+}
+.breadRow {
+  padding: 0 !important;
+  width: 100% !important;
+}
+.formRow {
+  padding: 0 !important;
+  margin-top: 2em !important;
+}
+.formSegment {
+  background-color: #f2f0ee !important;
+  box-shadow: 0px 10px 10px -10px rgba(0,0,0,0.4) !important;
+}
+.dynamicSegment {
+  border: none !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+}
+.breadrow {
+  padding-top: 0 !important;
+}
