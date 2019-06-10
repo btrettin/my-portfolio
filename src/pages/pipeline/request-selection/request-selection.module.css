@@ -1,0 +1,38 @@
+.grid {
+  padding: 1em 0.5em !important;
+  width: 100% !important;
+}
+.pipelineSegment {
+  width: 100% !important;
+  border: none !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+}
+.headerSegment {
+  width: 100% !important;
+  border: none !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+  margin: 1em 0 !important;
+}
+.header {
+  margin-bottom: 0.25em !important;
+}
+.subHeader {
+  margin-top: 0em !important;
+}
+.breadrow {
+  padding-top: 0 !important;
+}
+.buttonSegment {
+  box-shadow: none !important;
+  display: flex !important;
+  padding: 0 !important;
+  width: 100% !important;
+  margin: 0 !important;
+  border: 2px solid #20ad1d !important;
+  margin-bottom: 1em !important;
+  height: 7em !important;
+}
+.buttonComponent {
+}

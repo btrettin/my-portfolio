@@ -1,0 +1,27 @@
+.link {
+  height: 100% !important;
+  padding: 0.2em !important;
+  display: flex !important;
+  align-items: center !important;
+  width: 100% !important;
+}
+.icon {
+  height: 4em !important;
+  width: 4em !important;
+}
+.segment {
+  border: none !important;
+  box-shadow: none !important;
+}
+.button {
+  background-color: white !important;
+  width: 100% !important;
+}
+.header {
+  margin: 0 !important;
+}
+.arrow {
+  margin-left: auto !important;
+  height: 2.5em !important;
+  width: 2.5em !important;
+}

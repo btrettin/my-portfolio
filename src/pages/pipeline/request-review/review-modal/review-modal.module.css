@@ -1,0 +1,24 @@
+.modalButton {
+  background-color: #20ad1d !important;
+  color: white !important;
+}
+.loginButton {
+  color: #0e42ff !important;
+  border: 1.5px solid #0e42ff !important;
+  background-color: #ffffff !important;
+}
+.segment {
+  box-shadow: none !important;
+  border: none !important;
+}
+.modal {
+  width: 30em !important;
+  left: 37% !important;
+}
+.signUpButton {
+  background-color: #20ad1d !important;
+  color: white !important;
+}
+.Input {
+  width: 100% !important;
+}

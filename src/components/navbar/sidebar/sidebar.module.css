@@ -1,0 +1,38 @@
+.menuButton {
+  border-radius: 0 !important;
+  background-color: black !important;
+}
+.sidebar {
+}
+.menuIcon {
+  color: white !important;
+  font-size: 2em !important;
+}
+.aboutTerraItem {
+  height: 7em !important;
+}
+.featuresItem {
+  height: 7em !important;
+}
+.helpItem {
+  height: 7em !important;
+}
+.contactItem {
+  height: 7em !important;
+}
+.aboutTerraText {
+  color: white !important;
+  font-size: 2em !important;
+}
+.featuresText {
+  color: white !important;
+  font-size: 2em !important;
+}
+.helpText {
+  color: white !important;
+  font-size: 2em !important;
+}
+.contactText {
+  color: white !important;
+  font-size: 2em !important;
+}

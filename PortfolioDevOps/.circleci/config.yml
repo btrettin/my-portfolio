@@ -1,37 +1,86 @@
-# Javascript Node CircleCI 2.0 configuration file
-#
-# Check https://circleci.com/docs/2.0/language-javascript/ for more details
-#
-version: 2
+version: 2.1
+orbs:
+  aws-cli: circleci/aws-cli@0.1.9
 jobs:
-  build:
-    docker:
-      # specify the version you desire here
-      - image: circleci/node:7.10
+  deploy_aws_cloud_formation:
+      working_directory: /app
+      docker:
+          - image: docker:17.05.0-ce-git
+      steps:
+          - checkout
+          - run:
+              name: Install Dependencies
+              command: |
+                apk add --no-cache \
+                    py-pip=9.0.0-r1
+                pip install \
+                    docker-compose==1.12.0 \
+                    awscli==1.16.113
+          - run:
+              name: Configure AWS CLI To Run As Admin Role
+              command: |
+                aws configure set aws_access_key_id $AWS_ACCESS_KEY
+                aws configure set aws_secret_access_key $SECRET_AWS_ACCESS_KEY
+                aws configure set default.region us-east-1
+          - run:
+              name: Deploy Cloudformation Stack
+              command: |
+               DomainParentHostedZoneID=$(aws route53 list-hosted-zones-by-name --query "(HostedZones[?Name=='bentrettin.com.'])[0].Id" --output text)
+                CertificateArn=$(aws acm list-certificates --query "(CertificateSummaryList[?DomainName=='*.bentrettin.com'])[0].CertificateArn" --output text)
+               aws cloudformation deploy --template-file portfolioFrontendStack.yaml --stack-name PortfolioStack --no-fail-on-empty-changeset --parameter-overrides BucketNameArgument=${FrontendDeploymentBucket} DomainName=www.bentrettin.com HostedZoneId=${DomainParentHostedZoneID} AcmCertificate=${CertificateArn}
+              no_output_timeout: 1h
 
-      # Specify service dependencies here if necessary
-      # CircleCI maintains a library of pre-built images
-      # documented at https://circleci.com/docs/2.0/circleci-images/
-      # - image: circleci/mongo:3.4.4
-
-    working_directory: ~/repo
-
-    steps:
-      - checkout
-
-      # Download and cache dependencies
-      - restore_cache:
-          keys:
-            - v1-dependencies-{{ checksum "package.json" }}
-            # fallback to using the latest cache if no exact match is found
-            - v1-dependencies-
-
-      - run: yarn install
-
-      - save_cache:
-          paths:
-            - node_modules
-          key: v1-dependencies-{{ checksum "package.json" }}
-
-      # run tests!
-      - run: yarn test
+  deploy_react_to_cloud_front:
+      working_directory: ~/app
+      docker:
+          - image: circleci/node:8.11.0
+      steps:
+          - checkout
+          - run:
+              name: Clone React Repo
+              command: |
+                git clone https://github.com/btrettin/my-portfolio.git
+          - run:
+              name: update-npm
+              command: 'sudo npm install -g npm@latest'
+          - run:
+              name: Install Dependencies
+              command: |
+                cd LawnNannyWeb
+                npm install --only=dev
+                npm install
+          - run:
+              name: Added domainRequests.json
+              command: |
+                touch ./LawnNannyWeb/src/domainRequests.json
+                echo "{}" >> ./LawnNannyWeb/src/domainRequests.json
+          - run:
+              name: Unit Tests For React
+              command: |
+                cd LawnNannyWeb && npm run test
+          - run:
+              name: Build React
+              command: |
+                cd LawnNannyWeb && npm run build
+          - run:
+              name: Install AWS CLI
+              command: |
+                sudo apt-get -y -qq install awscli
+          - run:
+              name: Configure AWS CLI to Run as Admin
+              command: |
+                  aws configure set aws_access_key_id $adminAccessKey
+                  aws configure set aws_secret_access_key $adminSecretAccessKey
+                  aws configure set default.region us-east-1
+          - run:
+              name: Ship Build File To S3 Bucket
+              command: |
+                 cd LawnNannyWeb && aws s3 mv ./build s3://${BucketName} --recursive --acl public-read-write
+workflows:
+    version: 2
+    build_and_test:
+        jobs:
+            - deploy_aws_cloud_formation
+            - deploy_react_to_cloud_front:
+                requires:
+                    - deploy_aws_cloud_formation
