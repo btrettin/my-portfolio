@@ -1,7 +1,7 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 import configureStore from 'redux-mock-store';
-import LoginModal from './';
+import App from './';
 
 describe('Connected Login Modal', () => {
   let store;
@@ -9,8 +9,8 @@ describe('Connected Login Modal', () => {
   beforeEach(() => {
     const state = {
       login: {
-        isLoginModalOpen: false,
-      },
+        isSignupModalOpen: false
+      }
     };
 
     const mockStore = configureStore();
@@ -18,11 +18,11 @@ describe('Connected Login Modal', () => {
   });
 
   it('has the correct props', () => {
-    const wrapper = shallow(<LoginModal store={store} />);
+    const wrapper = shallow(<App store={store} />);
 
-    const dispatchProps = ['toggleLoginModal', 'swapModal'];
+    const dispatchProps = ['toggleSignupModal', 'swapModal'];
 
-    dispatchProps.forEach((prop) => {
+    dispatchProps.forEach(prop => {
       expect(wrapper.props()[prop]).toEqual(expect.any(Function));
     });
   });

@@ -8,11 +8,4 @@ export default {
     toggleSignupModal: (i += 1),
     swapModal: (i += 1),
   },
-  requests: {
-    setTypeOfRequest: (i += 1),
-    setRequestInformation: (i += 1),
-    setRequestLocation: (i += 1),
-    setRequestPrice: (i += 1),
-    requestInProgress: (i += 1),
-  },
 };
