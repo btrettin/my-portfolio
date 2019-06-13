@@ -2,8 +2,37 @@ version: 2.1
 orbs:
   aws-cli: circleci/aws-cli@0.1.9
 jobs:
+  deploy_front_end_infra:
+    working_directory: /app
+    docker:
+        - image: docker:17.05.0-ce-git
+    steps:
+        - checkout
+        - run:
+            name: Install Dependencies
+            command: |
+              apk add --no-cache \
+                  py-pip=9.0.0-r1
+              pip install \
+                  docker-compose==1.12.0 \
+                  awscli==1.16.113
+        - run:
+            name: Configure AWS CLI to Run as Admin
+            command: |
+                aws configure set aws_access_key_id $adminAccessKey
+                aws configure set aws_secret_access_key $adminSecretAccessKey
+                aws configure set default.region $REGION
+        - run:
+            name: Deploy Portfolio Frontend Stack
+            command: |
+             DomainParentHostedZoneID=$(aws route53 list-hosted-zones-by-name --query "(HostedZones[?Name=='bentrettin.com.'])[0].Id" --output text)
+             CertificateArn=$(aws acm list-certificates --query "(CertificateSummaryList[?DomainName=='*.bentrettin.com'])[0].CertificateArn" --output text)
+             aws cloudformation deploy --template-file portfolioFrontendStack.yaml --stack-name bentrettinportfoliostack3 --no-fail-on-empty-changeset --parameter-overrides BucketNameArgument=${FrontendDeploymentBucket} DomainName=www.bentrettin.com HostedZoneId=${DomainParentHostedZoneID} AcmCertificate=${CertificateArn}
+            no_output_timeout: 1h
+
+
   deploy_code_react_to_cloud_front:
-      working_directory: /app
+      working_directory: ~/app
       docker:
           - image: circleci/node:8.11.0
       steps:
@@ -57,4 +86,7 @@ workflows:
     version: 2
     build_and_test:
         jobs:
+            - deploy_front_end_infra
             - deploy_code_react_to_cloud_front:
+                requires:
+                  - deploy_front_end_infra
