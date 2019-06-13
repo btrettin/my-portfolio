@@ -3,7 +3,7 @@ orbs:
   aws-cli: circleci/aws-cli@0.1.9
 jobs:
   deploy_code_react_to_cloud_front:
-      working_directory: ~/app
+      working_directory: /app
       docker:
           - image: circleci/node:8.11.0
       steps:
