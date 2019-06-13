@@ -9,8 +9,8 @@ describe('Connected Login Modal', () => {
   beforeEach(() => {
     const state = {
       login: {
-        isSignupModalOpen: false
-      }
+        isSignupModalOpen: false,
+      },
     };
 
     const mockStore = configureStore();
@@ -22,7 +22,7 @@ describe('Connected Login Modal', () => {
 
     const dispatchProps = ['toggleSignupModal', 'swapModal'];
 
-    dispatchProps.forEach(prop => {
+    dispatchProps.forEach((prop) => {
       expect(wrapper.props()[prop]).toEqual(expect.any(Function));
     });
   });
