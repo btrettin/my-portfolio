@@ -54,6 +54,7 @@ Resources:
                   ViewerProtocolPolicy: redirect-to-https
                   ForwardedValues:
                       QueryString: true
+                  DefaultTTL: '30'
                 Origins:
                 - DomainName: !GetAtt [BenTrettinPortfolioS3, DomainName]
                   Id: S3-Website-FrontendDeploymentBucket.s3-website-us-east-1.amazonaws.com
@@ -61,5 +62,3 @@ Resources:
                       OriginAccessIdentity: !Sub
                         - origin-access-identity/cloudfront/${IDOfOriginAccessIdentity}
                         - { IDOfOriginAccessIdentity: !Ref CloudFrontOriginAccessIdentity }
-            DefaultCacheBehavior:
-                DefaultTTL: '30'
