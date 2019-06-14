@@ -61,3 +61,5 @@ Resources:
                       OriginAccessIdentity: !Sub
                         - origin-access-identity/cloudfront/${IDOfOriginAccessIdentity}
                         - { IDOfOriginAccessIdentity: !Ref CloudFrontOriginAccessIdentity }
+            DefaultCacheBehavior:
+                DefaultTTL: '30'
