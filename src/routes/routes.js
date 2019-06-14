@@ -8,6 +8,7 @@ import thunk from 'redux-thunk';
 import { Error404 } from '../components/errors';
 import HomePageComponent from '../pages/homepage';
 import App from '../components/app';
+import Navbar from '../components/navbar';
 import reducers from '../reducers';
 import styles from '../components/app/app.module.css';
 
@@ -23,6 +24,7 @@ export const Routes = () => {
         <Route
           render={() => (
             <div className={styles.div}>
+              <Navbar />
               <Switch>
                 <Route exact path="/test" component={App} />
                 <Route exact path="/HomePage" component={HomePageComponent} />

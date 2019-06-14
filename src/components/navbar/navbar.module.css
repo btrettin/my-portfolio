@@ -1,0 +1,22 @@
+.Menu {
+  width: 100% !important;
+  min-height: 4em !important;
+  background-color: black !important;
+  box-shadow: none !important;
+  border: none !important;
+  margin: 0 !important;
+  align-items: center !important;
+  flex-direction: row !important;
+  justify-content: space-between !important;
+}
+.leftMenuDiv {
+  display: flex !important;
+  align-items: center !important;
+}
+.rightMenuDiv {
+  display: flex !important;
+}
+.homeIcon {
+  font-size: 2.5em !important;
+  color: #25ff03 !important;
+}
