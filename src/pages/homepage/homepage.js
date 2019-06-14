@@ -4,7 +4,7 @@ import styles from './homepage.module.css';
 
 const HomePage = () => (
   <Grid container spacing={24} className={styles.homepageContainer}>
-    <div>hello,world this is ben trettin</div>
+    <div>My Portoflio</div>
   </Grid>
 );
 export default HomePage;
