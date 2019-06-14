@@ -1,28 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuites name="jest tests" tests="7" failures="0" time="11.75">
-  <testsuite name="toggle login modal action" errors="0" failures="0" skipped="0" timestamp="2019-06-14T04:35:04" time="3.929" tests="2">
-    <testcase classname="toggle login modal action should return a lambda that returns an object with the toggleSignupModal action" name="toggle login modal action should return a lambda that returns an object with the toggleSignupModal action" time="0.01">
-    </testcase>
-    <testcase classname="swap modal action should return a lambda that returns an object with the swapModal action" name="swap modal action should return a lambda that returns an object with the swapModal action" time="0.001">
+<testsuites name="jest tests" tests="7" failures="0" time="10.728">
+  <testsuite name="404 Error" errors="0" failures="0" skipped="0" timestamp="2019-06-14T06:07:16" time="3.552" tests="1">
+    <testcase classname="404 Error is a reidrect" name="404 Error is a reidrect" time="0.021">
     </testcase>
   </testsuite>
-  <testsuite name="redux action with data" errors="0" failures="0" skipped="0" timestamp="2019-06-14T04:35:04" time="4.008" tests="1">
-    <testcase classname="redux action with data should return a lambda that returns an object with data and action type" name="redux action with data should return a lambda that returns an object with data and action type" time="0.009">
+  <testsuite name="Home Page" errors="0" failures="0" skipped="0" timestamp="2019-06-14T06:07:16" time="3.932" tests="1">
+    <testcase classname="Home Page is wrapped in a Grid" name="Home Page is wrapped in a Grid" time="0">
     </testcase>
   </testsuite>
-  <testsuite name="404 Error" errors="0" failures="0" skipped="0" timestamp="2019-06-14T04:35:04" time="4.164" tests="1">
-    <testcase classname="404 Error is a reidrect" name="404 Error is a reidrect" time="0.012">
+  <testsuite name="redux action with data" errors="0" failures="0" skipped="0" timestamp="2019-06-14T06:07:16" time="3.795" tests="1">
+    <testcase classname="redux action with data should return a lambda that returns an object with data and action type" name="redux action with data should return a lambda that returns an object with data and action type" time="0.016">
     </testcase>
   </testsuite>
-  <testsuite name="Home Page" errors="0" failures="0" skipped="0" timestamp="2019-06-14T04:35:03" time="5.511" tests="1">
-    <testcase classname="Home Page is wrapped in a Grid" name="Home Page is wrapped in a Grid" time="0.011">
+  <testsuite name="toggle login modal action" errors="0" failures="0" skipped="0" timestamp="2019-06-14T06:07:16" time="3.802" tests="2">
+    <testcase classname="toggle login modal action should return a lambda that returns an object with the toggleSignupModal action" name="toggle login modal action should return a lambda that returns an object with the toggleSignupModal action" time="0.007">
+    </testcase>
+    <testcase classname="swap modal action should return a lambda that returns an object with the swapModal action" name="swap modal action should return a lambda that returns an object with the swapModal action" time="0.002">
     </testcase>
   </testsuite>
-  <testsuite name="App" errors="0" failures="0" skipped="0" timestamp="2019-06-14T04:35:04" time="6.478" tests="1">
-    <testcase classname="App renders the routes component" name="App renders the routes component" time="0.011">
+  <testsuite name="App" errors="0" failures="0" skipped="0" timestamp="2019-06-14T06:07:16" time="5.731" tests="1">
+    <testcase classname="App renders the routes component" name="App renders the routes component" time="0.02">
     </testcase>
   </testsuite>
-  <testsuite name="Connected Login Modal" errors="0" failures="0" skipped="0" timestamp="2019-06-14T04:35:04" time="6.514" tests="1">
+  <testsuite name="Connected Login Modal" errors="0" failures="0" skipped="0" timestamp="2019-06-14T06:07:16" time="5.846" tests="1">
     <testcase classname="Connected Login Modal has the correct props" name="Connected Login Modal has the correct props" time="0.016">
     </testcase>
   </testsuite>
