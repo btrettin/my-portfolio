@@ -1,0 +1,43 @@
+.bottomNav {
+  position: fixed;
+  bottom: 0;
+  background-color: white !important;
+  width: 100%;
+  align-items: center;
+  height: 4em !important;
+}
+.homeNav {
+  color: #5f6368;
+  margin-bottom: 0.5em;
+}
+.homeIcon {
+  font-size: 3em !important;
+  height: 40px !important;
+}
+.homeIcon ::selection {
+  color: blue;
+}
+.requestBadge {
+  color: yellow;
+}
+.accountNav {
+  color: #5f6368 !important;
+}
+.accountIcon {
+  font-size: 3em !important;
+  height: 40px !important;
+}
+.accountBadge {
+  color: green;
+}
+.barNav {
+  color: #5f6368 !important;
+}
+.menuIcon {
+  font-size: 2.5em !important;
+  height: 40px !important;
+}
+.projectsIcon {
+  font-size: 3em !important;
+  height: 40px !important;
+}
