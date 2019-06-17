@@ -9,14 +9,30 @@
   flex-direction: row !important;
   justify-content: space-between !important;
 }
+.homeButton {
+  color: #6ed6ff !important;
+  font-size: 1em !important;
+}
 .button {
-  font-size: 2em !important;
+  font-size: 1.5em !important;
   color: #6ed6ff !important;
 }
+.githubButton {
+  font-size: 2em !important;
+  color: white !important;
+}
+.icon {
+  margin-right: 0.3em !important;
+}
+.linkedInButton {
+  font-size: 2em !important;
+  color: #4875b4 !important;
+}
 .leftMenuDiv {
-  width: 50% !important;
+  width: 60% !important;
   display: flex !important;
   justify-content: space-evenly !important;
+  align-items: center !important;
 }
 .rightMenuDiv {
 }
