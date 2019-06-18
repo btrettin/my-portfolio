@@ -11,8 +11,6 @@ export const NavbarDesktop = () => (
       <Link to="/HomePage" className={styles.button}>
         <Button className={styles.homeButton}>Ben Trettin</Button>
       </Link>
-    </div>
-    <div className={styles.centerMenuDiv}>
       <Button className={styles.button}>Projects</Button>
       <Button className={styles.button}>Resume</Button>
     </div>
