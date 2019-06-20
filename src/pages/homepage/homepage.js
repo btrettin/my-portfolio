@@ -15,6 +15,7 @@ const HomePage = () => (
         </div>
       </div>
     </div>
+    <div className={styles.projectsDiv} />
   </Grid>
 );
 export default HomePage;

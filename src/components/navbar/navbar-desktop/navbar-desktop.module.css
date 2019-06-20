@@ -1,9 +1,11 @@
 .Menu {
-  padding: 1em 0em !important;
+  position: fixed !important;
+  top: 0 !important;
+  padding: 0.7em 0em !important;
   font-family: Book Antiqua !important;
   width: 100% !important;
-  min-height: 4em !important;
-  background-color: #06373e !important;
+  min-height: 3em !important;
+  background-color: #171e26 !important;
   box-shadow: none !important;
   border: none !important;
   margin: 0 !important;
@@ -19,24 +21,24 @@
 }
 .button {
   font-family: inherit !important;
-  font-size: 1.5em !important;
+  font-size: 1em !important;
   color: white !important;
   padding: 0 0.75em !important;
 }
 .contactButton {
   font-family: inherit !important;
   border-radius: 0px !important;
-  font-size: 1.5em !important;
+  font-size: 1em !important;
   background-color: #f17a04 !important;
   color: white !important;
   margin: 0 0.75em !important;
 }
 .githubButton {
-  font-size: 2em !important;
+  font-size: 1.5em !important;
   color: white !important;
 }
 .linkedInButton {
-  font-size: 2em !important;
+  font-size: 1.5em !important;
   color: white !important;
 }
 .leftMenuDiv {

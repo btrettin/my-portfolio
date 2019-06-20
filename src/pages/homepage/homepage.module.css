@@ -2,9 +2,9 @@
   margin: 0 !important;
 }
 .headerDiv {
-  height: 900px !important;
+  height: 1000px !important;
   width: 100% !important;
-  background-color: #06373e !important;
+  background-color: #171e26 !important;
   display: flex !important;
   align-items: center !important;
   justify-content: center !important;
@@ -27,4 +27,12 @@
   color: white !important;
   font-size: 18px !important;
   line-height: 1.2em !important;
+}
+.projectsDiv {
+  height: 3000px !important;
+  width: 100% !important;
+  background-color: white !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
 }
