@@ -5,14 +5,13 @@ import styles from './homepage.module.css';
 class HomePage extends Component {
   constructor(props) {
     super(props);
-    this.state = { apiResponse: [] };
+    this.state = { apiResponse: 'hello' };
   }
-
   componentWillMount() {
     this.callAPI();
   }
   callAPI() {
-    fetch('https://qew2e14k40.execute-api.us-east-1.amazonaws.com/Deployment/tom')
+    fetch('https://qew2e14k40.execute-api.us-east-1.amazonaws.com/Deployment/Ben')
       .then(res => res.text())
       .then(res => this.setState({ apiResponse: res }));
   }
