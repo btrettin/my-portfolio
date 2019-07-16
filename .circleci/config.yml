@@ -27,7 +27,7 @@ jobs:
             command: |
              DomainParentHostedZoneID=$(aws route53 list-hosted-zones-by-name --query "(HostedZones[?Name=='bentrettin.com.'])[0].Id" --output text)
              CertificateArn=$(aws acm list-certificates --query "(CertificateSummaryList[?DomainName=='*.bentrettin.com'])[0].CertificateArn" --output text)
-             aws cloudformation deploy --template-file portfolioFrontendStack.yaml --stack-name bentrettinportfoliostack4 --no-fail-on-empty-changeset --parameter-overrides BucketNameArgument=${FrontendDeploymentBucket} DomainName=www.bentrettin.com HostedZoneId=${DomainParentHostedZoneID} AcmCertificate=${CertificateArn}
+             aws cloudformation deploy --template-file portfolioFrontendStack.yaml --stack-name bentrettinportfoliostack5 --no-fail-on-empty-changeset --parameter-overrides BucketNameArgument=${FrontendDeploymentBucket} DomainName=www.bentrettin.com HostedZoneId=${DomainParentHostedZoneID} AcmCertificate=${CertificateArn}
             no_output_timeout: 1h
 
 
