@@ -1,21 +1,35 @@
-import React from 'react';
+import React, { Component } from 'react';
 import Grid from '@material-ui/core/Grid';
 import styles from './homepage.module.css';
 
-const HomePage = () => (
-  <Grid container spacing={24} className={styles.homepageContainer}>
-    <div className={styles.headerDiv}>
-      <div className={styles.textContainer}>
-        <h1 className={styles.header}> About Me </h1>
-        <div className={styles.content}>
-          My name is Ben and I am a full stack devlooper. I am passionate about learning new
-          technologies and software. Recently Ive became very interested in AWS. Actually, I created
-          this website as a place to experiment with the many features of AWS and continue to grow
-          as a developer.
+class HomePage extends Component {
+  constructor(props) {
+    super(props);
+    this.state = { apiResponse: [] };
+  }
+
+  componentWillMount() {
+    this.callAPI();
+  }
+  callAPI() {
+    fetch('https://qew2e14k40.execute-api.us-east-1.amazonaws.com/Deployment/tom')
+      .then(res => res.text())
+      .then(res => this.setState({ apiResponse: res }));
+  }
+  render() {
+    return (
+      <Grid container spacing={24} className={styles.homepageContainer}>
+        <div className={styles.headerDiv}>
+          <div className={styles.textContainer}>
+            <h1 className={styles.header}> About Me </h1>
+            <div className={styles.content}>
+              <p>{this.state.apiResponse}</p>
+            </div>
+          </div>
         </div>
-      </div>
-    </div>
-    <div className={styles.projectsDiv} />
-  </Grid>
-);
+        <div className={styles.projectsDiv} />
+      </Grid>
+    );
+  }
+}
 export default HomePage;
