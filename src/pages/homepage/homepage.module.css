@@ -2,9 +2,9 @@
   margin: 0 !important;
 }
 .headerDiv {
-  height: 1000px !important;
+  height: 800px !important;
   width: 100% !important;
-  background-image: url('./home3.jpg') !important;
+  background: url('./home3.jpg') no-repeat center center fixed !important;
   background-repeat: no-repeat !important;
   background-size: cover !important;
   display: flex !important;
@@ -12,8 +12,9 @@
   justify-content: center !important;
 }
 .textContainer {
+  margin-top: -10em !important;
   font-family: Book Antiqua !important;
-  width: 50% !important;
+  width: 90% !important;
   display: flex !important;
   flex-direction: column !important;
   align-items: center !important;
