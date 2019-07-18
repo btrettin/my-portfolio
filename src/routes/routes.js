@@ -23,15 +23,13 @@ export const Routes = () => {
       <BrowserRouter className="router">
         <Route
           render={() => (
-            <div className={styles.font}>
-              <div className={styles.div}>
-                <Navbar />
-                <Switch>
-                  <Route exact path="/test" component={App} />
-                  <Route exact path="/HomePage" component={HomePageComponent} />
-                  <Route path="/*" component={Error404} />
-                </Switch>
-              </div>
+            <div className={styles.div}>
+              <Navbar />
+              <Switch>
+                <Route exact path="/test" component={App} />
+                <Route exact path="/HomePage" component={HomePageComponent} />
+                <Route path="/*" component={Error404} />
+              </Switch>
             </div>
           )}
         />

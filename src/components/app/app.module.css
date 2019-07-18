@@ -3,6 +3,7 @@
   display: flex !important;
   flex-wrap: wrap !important;
   justify-content: center !important;
+  height: 100% !important;
 }
 .navBar {
   border: none !important;

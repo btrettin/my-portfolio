@@ -2,7 +2,7 @@
   margin: 0 !important;
 }
 .headerDiv {
-  height: 800px !important;
+  height: 100% !important;
   width: 100% !important;
   background: url('./home3.jpg') no-repeat center center fixed !important;
   background-repeat: no-repeat !important;
@@ -12,7 +12,7 @@
   justify-content: center !important;
 }
 .textContainer {
-  margin-top: -10em !important;
+  margin-top: -20em !important;
   font-family: Book Antiqua !important;
   width: 90% !important;
   display: flex !important;
@@ -21,7 +21,7 @@
   justify-content: center !important;
 }
 .header {
-  font-weight: lighter !important;
+  font-weight: normal !important;
   color: white !important;
   font-size: 30px !important;
 }
