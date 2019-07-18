@@ -11,8 +11,9 @@
   position: absolute !important;
   top: 0em !important;
   right: 0em !important;
-  padding: 0em !important;
+  padding: 0.4em !important;
   margin: 0 !important;
+  min-width: 24px !important;
 }
 .loginButton {
   color: white !important;
@@ -22,11 +23,11 @@
   cursor: pointer !important;
   background-color: white !important;
   border: none !important;
+  margin-top: 0.3em !important;
 }
 .closeIcon {
   color: #3bc401 !important;
   font-size: 2em !important;
-  margin-right: -1.2em !important;
 }
 .modalAction {
   margin: 0em !important;
@@ -105,17 +106,17 @@
   margin-top: 1em;
 }
 .signupText {
-  font-size: 1.2em !important;
+  font-size: 1em !important;
   margin: 0em !important;
   padding-right: 0.5em !important;
 }
 .signupButton {
-  width: 5.5em !important;
-  height: 2.5em !important;
+  width: 5.3em !important;
+  height: 2.4em !important;
   background-color: white !important;
   border: 1px solid black !important;
   border-radius: 0 !important;
   padding: 3px 4px !important;
   font-weight: bold !important;
-  font-size: 0.9em !important;
+  font-size: 0.85em !important;
 }
