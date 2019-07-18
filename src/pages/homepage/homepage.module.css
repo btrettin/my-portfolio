@@ -12,7 +12,7 @@
   justify-content: center !important;
 }
 .textContainer {
-  margin-top: -13em !important;
+  margin-top: -10em !important;
   font-family: Book Antiqua !important;
   width: 90% !important;
   display: flex !important;
@@ -21,6 +21,7 @@
   justify-content: center !important;
 }
 .header {
+  text-align: center !important;
   font-weight: normal !important;
   color: white !important;
   font-size: 30px !important;
