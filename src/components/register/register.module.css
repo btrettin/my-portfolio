@@ -1,0 +1,47 @@
+.registerButton {
+  color: white !important;
+  border: 1px solid white !important;
+}
+.title {
+  align-self: center !important;
+}
+.titleText {
+  font-size: 2em !important;
+}
+.content {
+  padding: 0 32px 32px !important;
+  max-width: 30em !important;
+}
+.form {
+  display: flex !important;
+  flex-direction: column !important;
+}
+.fieldDivRow {
+  display: flex !important;
+}
+.fieldDiv {
+  width: 100% !important;
+  margin-right: 1em !important;
+  margin-top: 1.5em !important;
+}
+.fieldFirstName {
+  margin-right: 1em !important;
+}
+.errorMessage {
+  font-size: 1.5em !important;
+  margin-top: 0.3em !important;
+  color: red !important;
+}
+.controller {
+  width: inherit !important;
+}
+.button {
+  width: 100% !important;
+  background-color: #29c902 !important;
+  margin-top: 1.5em !important;
+  border: 0 !important;
+  height: 2em !important;
+  font-size: 1.5em !important;
+  border-radius: 5px !important;
+  color: white !important;
+}

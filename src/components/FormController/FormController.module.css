@@ -1,0 +1,14 @@
+.controller {
+  width: inherit !important;
+}
+.input {
+  font-size: 1.5em !important;
+  margin-top: 0.85em !important;
+}
+.label {
+  font-size: 1.5em !important;
+}
+.labelError {
+  color: red !important;
+  font-size: 1.5em !important;
+}

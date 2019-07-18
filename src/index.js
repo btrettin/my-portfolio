@@ -5,7 +5,7 @@ import App from './components/app';
 
 ReactDOM.render(
   <CookiesProvider>
-    <App />
+    <App />\
   </CookiesProvider>,
   document.getElementById('root'),
 );

@@ -2,8 +2,8 @@ import Actions from '../actions';
 
 const getInitialState = () => ({
   isLoggedIn: false,
-  isLoginModalOpen: false,
-  isSignupModalOpen: false,
+  isLoginOpen: false,
+  isRegisterOpen: false,
 });
 
 const setState = (previousState, property, newValue) =>
@@ -19,14 +19,14 @@ export default (state = getInitialState(), action) => {
       return setState(state, 'signupDetails', action.data);
     case Actions.login.isLoggedIn:
       return setState(state, 'isLoggedIn', !state.isLoggedIn);
-    case Actions.login.toggleLoginModal:
-      return setState(state, 'isLoginModalOpen', !state.isLoginModalOpen);
-    case Actions.login.toggleSignupModal:
-      return setState(state, 'isSignupModalOpen', !state.isSignupModalOpen);
+    case Actions.login.toggleLogin:
+      return setState(state, 'isLoginOpen', !state.isLoginOpen);
+    case Actions.login.toggleRegister:
+      return setState(state, 'isRegisterOpen', !state.isRegisterOpen);
     case Actions.login.swapModal:
       return setState({
-        isLoginModalOpen: !state.isLoginModalOpen,
-        isSignupModalOpen: !state.isSignupModalOpen,
+        isLoginOpen: !state.isLoginOpen,
+        isRegisterOpen: !state.isRegisterOpen,
       });
     default:
       return state;
