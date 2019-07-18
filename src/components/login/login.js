@@ -34,13 +34,13 @@ class loginModal extends Component {
         >
           <div className={styles.contentDiv}>
             <DialogTitle id="form-dialog-title" className={styles.modalHeader}>
-              <h2 className={styles.headerText}> Lawn Nanny </h2>
+              <h2 className={styles.headerText}> Login </h2>
             </DialogTitle>
             <DialogContent className={styles.loginContent}>
               <LoginForm />
-              <div onClick={this.props.toggleLogin} className={styles.forgotPassword}>
+              <button onClick={this.props.toggleLogin} className={styles.forgotPassword}>
                 Forgot Password?
-              </div>
+              </button>
               <div className={styles.signupDiv}>
                 <h2 className={styles.signupText}>Dont have an account?</h2>
                 <Button onClick={this.props.swapModal} className={styles.signupButton}>

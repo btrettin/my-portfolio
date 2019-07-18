@@ -20,6 +20,8 @@
 .forgotPassword {
   color: blue !important;
   cursor: pointer !important;
+  background-color: white !important;
+  border: none !important;
 }
 .closeIcon {
   color: #3bc401 !important;
@@ -57,6 +59,7 @@
   flex-direction: column !important;
   align-items: center !important;
   padding: 0em !important;
+  padding-top: 0.5em !important;
 }
 .modalHeader {
   display: flex !important;
