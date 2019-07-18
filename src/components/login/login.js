@@ -38,6 +38,9 @@ class loginModal extends Component {
             </DialogTitle>
             <DialogContent className={styles.loginContent}>
               <LoginForm />
+              <div onClick={this.props.toggleLogin} className={styles.forgotPassword}>
+                Forgot Password?
+              </div>
               <div className={styles.signupDiv}>
                 <h2 className={styles.signupText}>Dont have an account?</h2>
                 <Button onClick={this.props.swapModal} className={styles.signupButton}>

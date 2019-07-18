@@ -11,17 +11,20 @@
   position: absolute !important;
   top: 0em !important;
   right: 0em !important;
-  width: 1.5em !important;
-  height: 3em !important;
   padding: 0em !important;
   margin: 0 !important;
 }
 .loginButton {
   color: white !important;
 }
+.forgotPassword {
+  color: blue !important;
+  cursor: pointer !important;
+}
 .closeIcon {
   color: #3bc401 !important;
-  font-size: 3em !important;
+  font-size: 2em !important;
+  margin-right: -1.2em !important;
 }
 .modalAction {
   margin: 0em !important;
@@ -107,7 +110,7 @@
   width: 5.5em !important;
   height: 2.5em !important;
   background-color: white !important;
-  border: 2px solid black !important;
+  border: 1px solid black !important;
   border-radius: 0 !important;
   padding: 3px 4px !important;
   font-weight: bold !important;
