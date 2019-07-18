@@ -1,5 +1,6 @@
 .formContainer {
   flex-grow: 1 !important;
+  width: 100% !important;
 }
 .form {
   display: flex !important;
@@ -10,37 +11,36 @@
 .formHeader {
 }
 .addressContainer {
-  margin: 0.6em 0em !important;
+  margin: 0.3em 0em !important;
   width: 100% !important;
 }
 .addressContainerError {
-  margin: 0.6em 0em !important;
+  margin: 0.3em 0em !important;
   width: 100% !important;
   border: 2px solid red !important;
 }
 .fieldLabel {
-  font-size: 1.8em !important;
+  font-size: 1.2em !important;
 }
 .fieldLabelError {
-  font-size: 1.8em !important;
+  font-size: 1.2em !important;
   color: red !important;
 }
 .input {
-  font-size: 2em !important;
-  padding-top: 0.4em !important;
+  font-size: 1.4em !important;
 }
 .inputError {
   color: red;
-  font-size: 1.3em;
+  font-size: 1em;
 }
 .submitButton {
   width: 100%;
   background-color: #3bc401;
   border: 0;
   height: 2em;
-  font-size: 1.9em;
+  font-size: 1.3em;
   border-radius: 5px;
   color: white;
-  margin-top: 0.6em;
-  margin-bottom: 0.4em;
+  margin-top: 0.3em;
+  margin-bottom: 0.2em;
 }
