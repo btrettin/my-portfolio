@@ -36,7 +36,8 @@ export const Register = (props) => {
       .min(8, 'Password must be at least 8 characters long')
       .matches(/[a-zA-Z]/, 'Password can only contain Latin letters')
       .matches(/[a-z]/, 'Password must include 1 lower case letter')
-      .matches(/[A-Z]/, 'Password must include 1 upper case letter'),
+      .matches(/[A-Z]/, 'Password must include 1 upper case letter')
+      .matches(/[A-Z]/, 'Password must include 1 number'),
   });
   return (
     <div>
