@@ -8,6 +8,7 @@ import * as Yup from 'yup';
 import DialogTitle from '@material-ui/core/DialogTitle';
 import DialogContent from '@material-ui/core/DialogContent';
 import { Formik, Form, Field, ErrorMessage } from 'formik';
+import { Auth } from 'aws-amplify';
 import { FormController } from '../FormController/FormController';
 import styles from './register.module.css';
 
@@ -16,7 +17,6 @@ export const Register = (props) => {
   const firstNameISTooLongMessage = 'First name is too long!';
   const lastNameIsTooShortMessage = 'Last name is too short!';
   const lastNameISTooLongMessage = 'Last name is too long!';
-  const passwordIsTooShortMessage = 'Password is too short!';
   const invalidEmailMessage = 'Not a valid Email!';
 
   const SignupSchema = Yup.object().shape({
@@ -32,8 +32,11 @@ export const Register = (props) => {
       .email(invalidEmailMessage)
       .required('Required*'),
     password: Yup.string()
-      .min(8, passwordIsTooShortMessage)
-      .required('Required*'),
+      .required('Required*')
+      .min(8, 'Password must be at least 8 characters long')
+      .matches(/[a-zA-Z]/, 'Password can only contain Latin letters')
+      .matches(/[a-z]/, 'Password must include 1 lower case letter')
+      .matches(/[A-Z]/, 'Password must include 1 upper case letter'),
   });
   return (
     <div>
@@ -54,7 +57,27 @@ export const Register = (props) => {
                 password: '',
               }}
               validationSchema={SignupSchema}
-              onSubmit={() => 5}
+              onSubmit={async (values, { setSubmitting }) => {
+                const firstName = values.firstName;
+                const lastName = values.lastName;
+                const password = values.password;
+                const username = values.email;
+                try {
+                  const signUpResponse = await Auth.signUp({
+                    username,
+                    password,
+                    attributes: {
+                      email: username,
+                      given_name: firstName,
+                      family_name: lastName,
+                    },
+                  });
+                  console.log(signUpResponse);
+                } catch (error) {
+                  console.log(error.message);
+                }
+                setSubmitting(false);
+              }}
             >
               {() => (
                 <div>
