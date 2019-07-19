@@ -4,10 +4,11 @@ import PropTypes from 'prop-types';
 import AppBar from '@material-ui/core/AppBar';
 import Button from '@material-ui/core/Button';
 import IconButton from '@material-ui/core/IconButton';
-import AccountIcon from '@material-ui/icons/AccountCircle';
+// import AccountIcon from '@material-ui/icons/AccountCircle';
 import MenuItem from '@material-ui/core/MenuItem';
 import Menu from '@material-ui/core/Menu';
 import styles from './navbar-desktop.module.css';
+import Lbj from './Lbj2.jpg';
 import RegisterModal from '../../../containers/connected-register';
 import LoginModal from '../../../containers/connected-login';
 
@@ -32,7 +33,8 @@ export const NavbarDesktop = (props) => {
         {props.isLoggedIn ? (
           <div>
             <IconButton onClick={handleClick} className={styles.accountButton}>
-              <AccountIcon className={styles.accountIcon} />
+              <img src={Lbj} alt="Avatar" className={styles.imageIcon} />
+              {/* A JSX comment   // <AccountIcon className={styles.accountIcon} /> */}
             </IconButton>
             <Menu
               className={styles.menu}

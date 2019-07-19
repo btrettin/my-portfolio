@@ -74,6 +74,12 @@
   background-color: #fc5555 !important;
   color: white !important;
 }
+.imageIcon {
+  border-radius: 100% !important;
+  height: 2.5em !important;
+  width: 2.5em !important;
+  border: 3px solid white !important;
+}
 .itemButton:hover {
   background-color: red !important;
 }
