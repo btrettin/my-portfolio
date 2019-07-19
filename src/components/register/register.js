@@ -150,7 +150,7 @@ export const Register = (props) => {
             </div>
           </DialogContent>
           <DialogActions className={styles.modalAction}>
-            <Button onClick={props.toggleSignup} className={styles.closeButton}>
+            <Button onClick={props.toggleRegister} className={styles.closeButton}>
               <SvgIcon className={styles.closeIcon}>
                 <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z" />
               </SvgIcon>
@@ -165,10 +165,12 @@ export const Register = (props) => {
 Register.propTypes = {
   isRegisterOpen: PropTypes.func,
   toggleRegister: PropTypes.func,
+  swapModal: PropTypes.func,
 };
 
 Register.defaultProps = {
   isRegisterOpen: PropTypes.func,
   toggleRegister: PropTypes.func,
+  swapModal: PropTypes.func,
 };
 export default Register;
