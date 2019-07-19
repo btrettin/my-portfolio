@@ -1,143 +1,41 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuites name="jest tests" tests="61" failures="0" time="22.183">
-  <testsuite name="toggle login modal action" errors="0" failures="0" skipped="0" timestamp="2019-07-18T20:09:23" time="7.173" tests="2">
-    <testcase classname="toggle login modal action should return a lambda that returns an object with the toggleSignupModal action" name="toggle login modal action should return a lambda that returns an object with the toggleSignupModal action" time="0.017">
+<testsuites name="jest tests" tests="10" failures="0" time="26.201">
+  <testsuite name="toggle login modal action" errors="0" failures="0" skipped="0" timestamp="2019-07-19T21:49:51" time="7.092" tests="2">
+    <testcase classname="toggle login modal action should return a lambda that returns an object with the toggleSignupModal action" name="toggle login modal action should return a lambda that returns an object with the toggleSignupModal action" time="0.018">
     </testcase>
     <testcase classname="swap modal action should return a lambda that returns an object with the swapModal action" name="swap modal action should return a lambda that returns an object with the swapModal action" time="0.001">
     </testcase>
   </testsuite>
-  <testsuite name="404 Error" errors="0" failures="0" skipped="0" timestamp="2019-07-18T20:09:31" time="0.783" tests="1">
-    <testcase classname="404 Error is a reidrect" name="404 Error is a reidrect" time="0.012">
+  <testsuite name="404 Error" errors="0" failures="0" skipped="0" timestamp="2019-07-19T21:49:51" time="7.265" tests="1">
+    <testcase classname="404 Error is a reidrect" name="404 Error is a reidrect" time="0.026">
     </testcase>
   </testsuite>
-  <testsuite name="Home Page" errors="0" failures="0" skipped="0" timestamp="2019-07-18T20:09:23" time="8.432" tests="1">
+  <testsuite name="redux action with data" errors="0" failures="0" skipped="0" timestamp="2019-07-19T21:49:58" time="0.513" tests="1">
+    <testcase classname="redux action with data should return a lambda that returns an object with data and action type" name="redux action with data should return a lambda that returns an object with data and action type" time="0.004">
+    </testcase>
+  </testsuite>
+  <testsuite name="Home Page" errors="0" failures="0" skipped="0" timestamp="2019-07-19T21:49:51" time="8.263" tests="1">
     <testcase classname="Home Page is wrapped in a Grid" name="Home Page is wrapped in a Grid" time="0.024">
     </testcase>
   </testsuite>
-  <testsuite name="redux action with data" errors="0" failures="0" skipped="0" timestamp="2019-07-18T20:09:31" time="0.518" tests="1">
-    <testcase classname="redux action with data should return a lambda that returns an object with data and action type" name="redux action with data should return a lambda that returns an object with data and action type" time="0.003">
+  <testsuite name="Connected Login Modal" errors="0" failures="0" skipped="0" timestamp="2019-07-19T21:49:51" time="12.191" tests="1">
+    <testcase classname="Connected Login Modal has the correct props" name="Connected Login Modal has the correct props" time="0.048">
     </testcase>
   </testsuite>
-  <testsuite name="Connected Login Modal" errors="0" failures="0" skipped="0" timestamp="2019-07-18T20:09:23" time="10.534" tests="1">
-    <testcase classname="Connected Login Modal has the correct props" name="Connected Login Modal has the correct props" time="0.032">
+  <testsuite name="Connected Login Modal" errors="0" failures="0" skipped="0" timestamp="2019-07-19T21:49:51" time="12.187" tests="1">
+    <testcase classname="Connected Login Modal has the correct props" name="Connected Login Modal has the correct props" time="0.038">
     </testcase>
   </testsuite>
-  <testsuite name="signup component" errors="0" failures="0" skipped="0" timestamp="2019-07-18T20:09:23" time="10.856" tests="52">
-    <testcase classname="signup component Should be a div" name="signup component Should be a div" time="0.004">
-    </testcase>
-    <testcase classname="signup component signup button Should be a button" name="signup component signup button Should be a button" time="0">
-    </testcase>
-    <testcase classname="signup component signup button Should say Registar" name="signup component signup button Should say Registar" time="0.001">
-    </testcase>
-    <testcase classname="signup component Dialog Should be a dialog" name="signup component Dialog Should be a dialog" time="0.001">
-    </testcase>
-    <testcase classname="signup component Dialog Dialog title Should be the correct type" name="signup component Dialog Dialog title Should be the correct type" time="0">
-    </testcase>
-    <testcase classname="signup component Dialog Dialog title Dialog title text Should be the correct type" name="signup component Dialog Dialog title Dialog title text Should be the correct type" time="0">
-    </testcase>
-    <testcase classname="signup component Dialog Dialog title Dialog title text Should have a title" name="signup component Dialog Dialog title Dialog title text Should have a title" time="0.001">
-    </testcase>
-    <testcase classname="signup component Dialog Dialog Content Should be the correct type" name="signup component Dialog Dialog Content Should be the correct type" time="0">
-    </testcase>
-    <testcase classname="signup component Dialog Dialog Content Formik form Should be the correct type" name="signup component Dialog Dialog Content Formik form Should be the correct type" time="0.001">
-    </testcase>
-    <testcase classname="signup component Dialog Dialog Content Formik form Initial values Should have the correct intial values" name="signup component Dialog Dialog Content Formik form Initial values Should have the correct intial values" time="0">
-    </testcase>
-    <testcase classname="signup component Dialog Dialog Content Formik form Validation Schema Should exist" name="signup component Dialog Dialog Content Formik form Validation Schema Should exist" time="0.001">
-    </testcase>
-    <testcase classname="signup component Dialog Dialog Content Formik form Validation Schema Should validate a valid request" name="signup component Dialog Dialog Content Formik form Validation Schema Should validate a valid request" time="0.043">
-    </testcase>
-    <testcase classname="signup component Dialog Dialog Content Formik form Validation Schema Should not validate if the first name is too long" name="signup component Dialog Dialog Content Formik form Validation Schema Should not validate if the first name is too long" time="0.005">
-    </testcase>
-    <testcase classname="signup component Dialog Dialog Content Formik form Validation Schema Should not validate if the last name is too long" name="signup component Dialog Dialog Content Formik form Validation Schema Should not validate if the last name is too long" time="0.001">
-    </testcase>
-    <testcase classname="signup component Dialog Dialog Content Formik form Validation Schema Should not validate if the first name is too short" name="signup component Dialog Dialog Content Formik form Validation Schema Should not validate if the first name is too short" time="0">
-    </testcase>
-    <testcase classname="signup component Dialog Dialog Content Formik form Validation Schema Should not validate if the last name is too short" name="signup component Dialog Dialog Content Formik form Validation Schema Should not validate if the last name is too short" time="0.001">
-    </testcase>
-    <testcase classname="signup component Dialog Dialog Content Formik form Validation Schema Should not validate object without required first name" name="signup component Dialog Dialog Content Formik form Validation Schema Should not validate object without required first name" time="0.004">
-    </testcase>
-    <testcase classname="signup component Dialog Dialog Content Formik form Validation Schema Should not validate object without required last name" name="signup component Dialog Dialog Content Formik form Validation Schema Should not validate object without required last name" time="0.001">
-    </testcase>
-    <testcase classname="signup component Dialog Dialog Content Formik form Validation Schema Should not validate object without required email" name="signup component Dialog Dialog Content Formik form Validation Schema Should not validate object without required email" time="0">
-    </testcase>
-    <testcase classname="signup component Dialog Dialog Content Formik form Validation Schema Should not validate object without required password" name="signup component Dialog Dialog Content Formik form Validation Schema Should not validate object without required password" time="0.001">
-    </testcase>
-    <testcase classname="signup component Dialog Dialog Content Formik form form Should be the correct type" name="signup component Dialog Dialog Content Formik form form Should be the correct type" time="0">
-    </testcase>
-    <testcase classname="signup component Dialog Dialog Content Formik form form name row Should be the correct type" name="signup component Dialog Dialog Content Formik form form name row Should be the correct type" time="0">
-    </testcase>
-    <testcase classname="signup component Dialog Dialog Content Formik form form name row first name Div Should be the correct type" name="signup component Dialog Dialog Content Formik form form name row first name Div Should be the correct type" time="0">
-    </testcase>
-    <testcase classname="signup component Dialog Dialog Content Formik form form name row first name Div first name Field Should be the correct type" name="signup component Dialog Dialog Content Formik form form name row first name Div first name Field Should be the correct type" time="0">
-    </testcase>
-    <testcase classname="signup component Dialog Dialog Content Formik form form name row first name Div first name Field Should have the correct name prop" name="signup component Dialog Dialog Content Formik form form name row first name Div first name Field Should have the correct name prop" time="0">
-    </testcase>
-    <testcase classname="signup component Dialog Dialog Content Formik form form name row first name Div first name Field FormController Should have the correct label prop" name="signup component Dialog Dialog Content Formik form form name row first name Div first name Field FormController Should have the correct label prop" time="0">
-    </testcase>
-    <testcase classname="signup component Dialog Dialog Content Formik form form name row first name Div first name Field FormController Should have the correct id prop" name="signup component Dialog Dialog Content Formik form form name row first name Div first name Field FormController Should have the correct id prop" time="0.001">
-    </testcase>
-    <testcase classname="signup component Dialog Dialog Content Formik form form name row first name Div first name Field FormController Should have the correct type prop" name="signup component Dialog Dialog Content Formik form form name row first name Div first name Field FormController Should have the correct type prop" time="0">
-    </testcase>
-    <testcase classname="signup component Dialog Dialog Content Formik form form name row first name Div first name ErrorMessage Should be the correct type" name="signup component Dialog Dialog Content Formik form form name row first name Div first name ErrorMessage Should be the correct type" time="0.001">
-    </testcase>
-    <testcase classname="signup component Dialog Dialog Content Formik form form name row last name Div Should be the correct type" name="signup component Dialog Dialog Content Formik form form name row last name Div Should be the correct type" time="0">
-    </testcase>
-    <testcase classname="signup component Dialog Dialog Content Formik form form name row last name Div last name Field Should be the correct type" name="signup component Dialog Dialog Content Formik form form name row last name Div last name Field Should be the correct type" time="0.001">
-    </testcase>
-    <testcase classname="signup component Dialog Dialog Content Formik form form name row last name Div last name Field Should have the correct name prop" name="signup component Dialog Dialog Content Formik form form name row last name Div last name Field Should have the correct name prop" time="0">
-    </testcase>
-    <testcase classname="signup component Dialog Dialog Content Formik form form name row last name Div last name Field FormController Should have the correct label prop" name="signup component Dialog Dialog Content Formik form form name row last name Div last name Field FormController Should have the correct label prop" time="0.001">
-    </testcase>
-    <testcase classname="signup component Dialog Dialog Content Formik form form name row last name Div last name Field FormController Should have the correct id prop" name="signup component Dialog Dialog Content Formik form form name row last name Div last name Field FormController Should have the correct id prop" time="0">
-    </testcase>
-    <testcase classname="signup component Dialog Dialog Content Formik form form name row last name Div last name Field FormController Should have the correct type prop" name="signup component Dialog Dialog Content Formik form form name row last name Div last name Field FormController Should have the correct type prop" time="0.001">
-    </testcase>
-    <testcase classname="signup component Dialog Dialog Content Formik form form name row last name Div last name ErrorMessage Should be the correct type" name="signup component Dialog Dialog Content Formik form form name row last name Div last name ErrorMessage Should be the correct type" time="0">
-    </testcase>
-    <testcase classname="signup component Dialog Dialog Content Formik form form email Div Should be the correct type" name="signup component Dialog Dialog Content Formik form form email Div Should be the correct type" time="0.001">
-    </testcase>
-    <testcase classname="signup component Dialog Dialog Content Formik form form email Div email Field Should be the correct type" name="signup component Dialog Dialog Content Formik form form email Div email Field Should be the correct type" time="0">
-    </testcase>
-    <testcase classname="signup component Dialog Dialog Content Formik form form email Div email Field Should have the correct name prop" name="signup component Dialog Dialog Content Formik form form email Div email Field Should have the correct name prop" time="0.001">
-    </testcase>
-    <testcase classname="signup component Dialog Dialog Content Formik form form email Div email Field FormController Should have the correct label prop" name="signup component Dialog Dialog Content Formik form form email Div email Field FormController Should have the correct label prop" time="0">
-    </testcase>
-    <testcase classname="signup component Dialog Dialog Content Formik form form email Div email Field FormController Should have the correct id prop" name="signup component Dialog Dialog Content Formik form form email Div email Field FormController Should have the correct id prop" time="0">
-    </testcase>
-    <testcase classname="signup component Dialog Dialog Content Formik form form email Div email Field FormController Should have the correct type prop" name="signup component Dialog Dialog Content Formik form form email Div email Field FormController Should have the correct type prop" time="0">
-    </testcase>
-    <testcase classname="signup component Dialog Dialog Content Formik form form email Div email ErrorMessage Should be the correct type" name="signup component Dialog Dialog Content Formik form form email Div email ErrorMessage Should be the correct type" time="0">
-    </testcase>
-    <testcase classname="signup component Dialog Dialog Content Formik form form password Div Should be the correct type" name="signup component Dialog Dialog Content Formik form form password Div Should be the correct type" time="0">
-    </testcase>
-    <testcase classname="signup component Dialog Dialog Content Formik form form password Div password Field Should be the correct type" name="signup component Dialog Dialog Content Formik form form password Div password Field Should be the correct type" time="0">
-    </testcase>
-    <testcase classname="signup component Dialog Dialog Content Formik form form password Div password Field Should have the correct name prop" name="signup component Dialog Dialog Content Formik form form password Div password Field Should have the correct name prop" time="0">
-    </testcase>
-    <testcase classname="signup component Dialog Dialog Content Formik form form password Div password Field FormController Should have the correct label prop" name="signup component Dialog Dialog Content Formik form form password Div password Field FormController Should have the correct label prop" time="0">
-    </testcase>
-    <testcase classname="signup component Dialog Dialog Content Formik form form password Div password Field FormController Should have the correct id prop" name="signup component Dialog Dialog Content Formik form form password Div password Field FormController Should have the correct id prop" time="0.001">
-    </testcase>
-    <testcase classname="signup component Dialog Dialog Content Formik form form password Div password Field FormController Should have the correct type prop" name="signup component Dialog Dialog Content Formik form form password Div password Field FormController Should have the correct type prop" time="0">
-    </testcase>
-    <testcase classname="signup component Dialog Dialog Content Formik form form password Div password ErrorMessage Should be the correct type" name="signup component Dialog Dialog Content Formik form form password Div password ErrorMessage Should be the correct type" time="0">
-    </testcase>
-    <testcase classname="signup component Dialog Dialog Content Formik form form button Should be the correct type" name="signup component Dialog Dialog Content Formik form form button Should be the correct type" time="0">
-    </testcase>
-    <testcase classname="signup component Dialog Dialog Content Formik form form button Should have the correct text" name="signup component Dialog Dialog Content Formik form form button Should have the correct text" time="0.001">
+  <testsuite name="App" errors="0" failures="0" skipped="0" timestamp="2019-07-19T21:49:51" time="14.023" tests="1">
+    <testcase classname="App renders the routes component" name="App renders the routes component" time="0.013">
     </testcase>
   </testsuite>
-  <testsuite name="App" errors="0" failures="0" skipped="0" timestamp="2019-07-18T20:09:23" time="11.534" tests="1">
-    <testcase classname="App renders the routes component" name="App renders the routes component" time="0.014">
+  <testsuite name="Connected Login Modal" errors="0" failures="0" skipped="0" timestamp="2019-07-19T21:49:51" time="14.197" tests="1">
+    <testcase classname="Connected Login Modal has the correct props" name="Connected Login Modal has the correct props" time="0.017">
     </testcase>
   </testsuite>
-  <testsuite name="Connected Login Modal" errors="0" failures="0" skipped="0" timestamp="2019-07-18T20:09:23" time="11.654" tests="1">
-    <testcase classname="Connected Login Modal has the correct props" name="Connected Login Modal has the correct props" time="0.02">
-    </testcase>
-  </testsuite>
-  <testsuite name="Connected Login Modal" errors="0" failures="0" skipped="0" timestamp="2019-07-18T20:09:23" time="11.8" tests="1">
-    <testcase classname="Connected Login Modal has the correct props" name="Connected Login Modal has the correct props" time="0.024">
+  <testsuite name="Connected Navbar" errors="0" failures="0" skipped="0" timestamp="2019-07-19T21:49:59" time="7.79" tests="1">
+    <testcase classname="Connected Navbar has the correct props" name="Connected Navbar has the correct props" time="0.015">
     </testcase>
   </testsuite>
 </testsuites>

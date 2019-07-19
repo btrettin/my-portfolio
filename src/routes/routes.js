@@ -8,7 +8,7 @@ import thunk from 'redux-thunk';
 import { Error404 } from '../components/errors';
 import HomePageComponent from '../pages/homepage';
 import App from '../components/app';
-import Navbar from '../components/navbar';
+import Navbar from '../containers/connected-navbar';
 import reducers from '../reducers';
 import styles from '../components/app/app.module.css';
 

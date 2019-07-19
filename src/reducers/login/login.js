@@ -1,6 +1,7 @@
 import Actions from '../actions';
 
 const getInitialState = () => ({
+  user: null,
   isLoggedIn: false,
   isLoginOpen: false,
   isRegisterOpen: false,
@@ -13,12 +14,10 @@ const setState = (previousState, property, newValue) =>
 
 export default (state = getInitialState(), action) => {
   switch (action.type) {
-    case Actions.login.login:
-      return setState(state, 'loginDetails', action.data);
-    case Actions.login.signup:
-      return setState(state, 'signupDetails', action.data);
-    case Actions.login.isLoggedIn:
-      return setState(state, 'isLoggedIn', !state.isLoggedIn);
+    case Actions.login.setUser:
+      return setState(state, 'user', action.data);
+    case Actions.login.setLoggedIn:
+      return setState(state, 'isLoggedIn', action.data);
     case Actions.login.toggleLogin:
       return setState(state, 'isLoginOpen', !state.isLoginOpen);
     case Actions.login.toggleRegister:

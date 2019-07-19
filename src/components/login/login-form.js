@@ -1,6 +1,7 @@
 import React from 'react';
 import { Formik, Field, Form, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
+import { Auth } from 'aws-amplify';
 import FormControl from '@material-ui/core/FormControl';
 import Input from '@material-ui/core/Input';
 import InputLabel from '@material-ui/core/InputLabel';
@@ -10,8 +11,7 @@ const initialValues = {
   email: '',
   password: '',
 };
-
-const LoginFormComponent = () => (
+const LoginFormComponent = props => (
   <div className={styles.formContainer}>
     <Formik
       validationSchema={Yup.object({
@@ -21,11 +21,21 @@ const LoginFormComponent = () => (
         password: Yup.string().required('Required*'),
       })}
       initialValues={initialValues}
-      onSubmit={(values, { setSubmitting }) => {
-        setTimeout(() => {
-          alert(JSON.stringify(values, null, 2));
-          setSubmitting(false);
-        }, 400);
+      onSubmit={async (values, { setSubmitting }) => {
+        const password = values.password;
+        const username = values.email;
+        try {
+          const user = await Auth.signIn(username, password);
+          console.log(user);
+          props.toggleLogin();
+          props.setLoggedIn(true);
+          props.setUser(user);
+
+          return setSubmitting(false);
+        } catch (error) {
+          console.log(error.message);
+          return setSubmitting(false);
+        }
       }}
     >
       {() => (

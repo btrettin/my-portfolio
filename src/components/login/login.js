@@ -37,7 +37,11 @@ class loginModal extends Component {
               <h2 className={styles.headerText}> LawnNanny </h2>
             </DialogTitle>
             <DialogContent className={styles.loginContent}>
-              <LoginForm />
+              <LoginForm
+                setLoggedIn={this.props.setLoggedIn}
+                setUser={this.props.setUser}
+                toggleLogin={this.props.toggleLogin}
+              />
               <button onClick={this.props.toggleLogin} className={styles.forgotPassword}>
                 Forgot Password?
               </button>
@@ -66,6 +70,8 @@ loginModal.propTypes = {
   isLoginOpen: PropTypes.func,
   classes: PropTypes.func,
   toggleLogin: PropTypes.func,
+  setUser: PropTypes.func,
+  setLoggedIn: PropTypes.func,
 };
 
 loginModal.defaultProps = {
@@ -73,5 +79,7 @@ loginModal.defaultProps = {
   isLoginOpen: PropTypes.func,
   classes: PropTypes.func,
   toggleLogin: PropTypes.func,
+  setUser: PropTypes.func,
+  setLoggedIn: PropTypes.func,
 };
 export default loginModal;
