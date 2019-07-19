@@ -26,7 +26,7 @@
   margin-top: 0.3em !important;
 }
 .closeIcon {
-  color: #3bc401 !important;
+  color: black !important;
   font-size: 2em !important;
 }
 .modalAction {
@@ -35,6 +35,7 @@
 }
 .Dialog {
   align-items: space-between !important;
+  overflow-y: auto !important;
 }
 .contentDiv {
   padding: 0 1.5em !important;
@@ -61,10 +62,11 @@
   align-items: center !important;
   padding: 0em !important;
   padding-top: 0.5em !important;
+  max-width: 20em !important;
 }
 .modalHeader {
   display: flex !important;
-  justify-content: left !important;
+  justify-content: center !important;
   font-size: 2rem !important;
   background-color: white !important;
   border-bottom: none !important;
