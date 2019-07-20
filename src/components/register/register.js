@@ -58,7 +58,7 @@ export const Register = (props) => {
                 password: '',
               }}
               validationSchema={SignupSchema}
-              onSubmit={async (values, { setSubmitting }) => {
+              onSubmit={async (values, actions) => {
                 const firstName = values.firstName;
                 const lastName = values.lastName;
                 const password = values.password;
@@ -74,13 +74,14 @@ export const Register = (props) => {
                     },
                   });
                   console.log(signUpResponse);
+                  return actions.setSubmitting(false);
                 } catch (error) {
-                  console.log(error.message);
+                  actions.setFieldError('general', error.message);
+                  return actions.setSubmitting(false);
                 }
-                setSubmitting(false);
               }}
             >
-              {() => (
+              {formikProps => (
                 <div>
                   <Form className={styles.form}>
                     <div id="nameFields" className={styles.fieldDivRow}>
@@ -159,9 +160,16 @@ export const Register = (props) => {
                         component="div"
                       />
                     </div>
-                    <button className={styles.button} type="submit">
-                      Sign Up
-                    </button>
+                    <React.Fragment>
+                      <button className={styles.button} type="submit">
+                        Sign Up
+                      </button>
+                      <ErrorMessage>
+                        {() => (
+                          <div className={styles.errorMessage}>{formikProps.errors.general}</div>
+                        )}
+                      </ErrorMessage>
+                    </React.Fragment>
                   </Form>
                 </div>
               )}

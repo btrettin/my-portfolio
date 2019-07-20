@@ -21,7 +21,7 @@ const LoginFormComponent = props => (
         password: Yup.string().required('Required*'),
       })}
       initialValues={initialValues}
-      onSubmit={async (values, { setSubmitting }) => {
+      onSubmit={async (values, actions) => {
         const password = values.password;
         const username = values.email;
         try {
@@ -30,15 +30,14 @@ const LoginFormComponent = props => (
           props.toggleLogin();
           props.setLoggedIn(true);
           props.setUser(user);
-
-          return setSubmitting(false);
+          return actions.setSubmitting(false);
         } catch (error) {
-          console.log(error.message);
-          return setSubmitting(false);
+          actions.setFieldError('general', error.message);
+          return actions.setSubmitting(false);
         }
       }}
     >
-      {() => (
+      {formikProps => (
         <Form className={styles.form}>
           <div>
             <Field name="email" type="text">
@@ -91,9 +90,14 @@ const LoginFormComponent = props => (
               {msg => <div className={styles.inputError}>{msg}</div>}
             </ErrorMessage>
           </div>
-          <button className={styles.submitButton} type="submit">
-            Log In
-          </button>
+          <React.Fragment>
+            <button className={styles.submitButton} type="submit">
+              Log In
+            </button>
+            <ErrorMessage>
+              {() => <div className={styles.inputError}>{formikProps.errors.general}</div>}
+            </ErrorMessage>
+          </React.Fragment>
         </Form>
       )}
     </Formik>

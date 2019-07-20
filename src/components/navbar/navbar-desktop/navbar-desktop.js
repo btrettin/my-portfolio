@@ -7,6 +7,7 @@ import IconButton from '@material-ui/core/IconButton';
 // import AccountIcon from '@material-ui/icons/AccountCircle';
 import MenuItem from '@material-ui/core/MenuItem';
 import Menu from '@material-ui/core/Menu';
+import { Auth } from 'aws-amplify';
 import styles from './navbar-desktop.module.css';
 import Lbj from './Lbj2.jpg';
 import RegisterModal from '../../../containers/connected-register';
@@ -21,6 +22,16 @@ export const NavbarDesktop = (props) => {
 
   function handleClose() {
     setAnchorEl(null);
+  }
+  function handleLogout() {
+    try {
+      Auth.signOut();
+      handleClose();
+      props.setLoggedIn(false);
+      props.setUser(null);
+    } catch (error) {
+      console.log(error);
+    }
   }
   return (
     <AppBar position="static" className={styles.Menu}>
@@ -71,14 +82,7 @@ export const NavbarDesktop = (props) => {
                 Learn More
               </MenuItem>
               <MenuItem className={styles.buttonMenuItem}>
-                <Button
-                  className={styles.itemButton}
-                  onClick={() => {
-                    handleClose();
-                    props.setLoggedIn(false);
-                    props.setUser(null);
-                  }}
-                >
+                <Button className={styles.itemButton} onClick={() => handleLogout()}>
                   Logout
                 </Button>
               </MenuItem>

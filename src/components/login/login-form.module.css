@@ -30,8 +30,9 @@
   font-size: 1.4em !important;
 }
 .inputError {
-  color: red;
-  font-size: 1em;
+  font-size: 1.2em !important;
+  margin-top: 0em !important;
+  color: red !important;
 }
 .submitButton {
   width: 100%;
