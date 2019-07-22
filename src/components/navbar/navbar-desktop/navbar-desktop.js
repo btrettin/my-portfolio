@@ -54,64 +54,96 @@ export const NavbarDesktop = (props) => {
         </Link>
       </div>
       <div className={styles.rightMenuDiv}>
-        {props.isLoggedIn ? (
-          <div>
-            <IconButton onClick={handleClick} className={styles.accountButton}>
-              <img src={Lbj} alt="Avatar" className={styles.imageIcon} />
-              {/* A JSX comment   // <AccountIcon className={styles.accountIcon} /> */}
-            </IconButton>
-            <Menu
-              className={styles.userMenu}
-              id="simple-menu"
-              anchorEl={anchorEl}
-              open={Boolean(anchorEl)}
-              onClose={handleClose}
-              getContentAnchorEl={null}
-              anchorOrigin={{
-                vertical: 'bottom',
-                horizontal: 'center',
-              }}
-              transformOrigin={{
-                vertical: 'top',
-                horizontal: 'right',
-              }}
-            >
-              <MenuItem className={styles.menuItem} onClick={handleAccount}>
-                Account
-              </MenuItem>
-              <MenuItem className={styles.menuItem} onClick={handleClose}>
-                My Requests
-              </MenuItem>
-              <MenuItem className={styles.menuItem} onClick={handleClose}>
-                About
-              </MenuItem>
-              <MenuItem className={styles.menuItem} onClick={handleClose}>
-                Help
-              </MenuItem>
-              <MenuItem className={styles.menuItem} onClick={handleClose}>
-                Invite Friends
-              </MenuItem>
-              <MenuItem className={styles.menuItem} onClick={handleClose}>
-                Learn More
-              </MenuItem>
-              <MenuItem className={styles.buttonMenuItem}>
-                <Button className={styles.itemButton} onClick={() => handleLogout()}>
-                  Logout
-                </Button>
-              </MenuItem>
-            </Menu>
-          </div>
-        ) : (
-          <React.Fragment>
-            <div className={styles.loginDiv}>
-              <LoginWithRouter />
-            </div>
-            <div className={styles.registerDiv}>
-              <RegisterWithRouter />
-            </div>
-          </React.Fragment>
-        )}
+        <Button
+          className={
+            props.location.pathname === '/HomePage'
+              ? styles.menuButtonMower
+              : styles.menuButtonMowerGray
+          }
+        >
+          Become a Mower
+        </Button>
+        <Button
+          className={
+            props.location.pathname === '/HomePage' ? styles.menuButton : styles.menuButtonGray
+          }
+        >
+          About
+        </Button>
+        <Button
+          className={
+            props.location.pathname === '/HomePage' ? styles.menuButton : styles.menuButtonGray
+          }
+        >
+          Support
+        </Button>
+        <Button
+          className={
+            props.location.pathname === '/HomePage'
+              ? styles.menuButtonLast
+              : styles.menuButtonGrayLast
+          }
+        >
+          Messages
+        </Button>
       </div>
+      {props.isLoggedIn ? (
+        <div className={styles.rightDiv}>
+          <IconButton onClick={handleClick} className={styles.accountButton}>
+            <img src={Lbj} alt="Avatar" className={styles.imageIcon} />
+            {/* A JSX comment   // <AccountIcon className={styles.accountIcon} /> */}
+          </IconButton>
+          <Menu
+            className={styles.userMenu}
+            id="simple-menu"
+            anchorEl={anchorEl}
+            open={Boolean(anchorEl)}
+            onClose={handleClose}
+            getContentAnchorEl={null}
+            anchorOrigin={{
+              vertical: 'bottom',
+              horizontal: 'center',
+            }}
+            transformOrigin={{
+              vertical: 'top',
+              horizontal: 'right',
+            }}
+          >
+            <MenuItem className={styles.menuItem} onClick={handleAccount}>
+              Account
+            </MenuItem>
+            <MenuItem className={styles.menuItem} onClick={handleClose}>
+              My Requests
+            </MenuItem>
+            <MenuItem className={styles.menuItem} onClick={handleClose}>
+              About
+            </MenuItem>
+            <MenuItem className={styles.menuItem} onClick={handleClose}>
+              Help
+            </MenuItem>
+            <MenuItem className={styles.menuItem} onClick={handleClose}>
+              Invite Friends
+            </MenuItem>
+            <MenuItem className={styles.menuItem} onClick={handleClose}>
+              Learn More
+            </MenuItem>
+            <MenuItem className={styles.buttonMenuItem}>
+              <Button className={styles.itemButton} onClick={() => handleLogout()}>
+                Logout
+              </Button>
+            </MenuItem>
+          </Menu>
+        </div>
+      ) : (
+        <div className={styles.rightDiv}>
+          <div className={styles.loginDiv}>
+            <LoginWithRouter />
+          </div>
+          <div className={styles.registerDiv}>
+            <RegisterWithRouter />
+          </div>
+        </div>
+      )}
     </AppBar>
   );
 };

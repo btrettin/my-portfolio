@@ -19,14 +19,14 @@
   display: flex !important;
 }
 .imageIcon {
-  height: 6em !important;
-  width: 6em !important;
+  height: 5em !important;
+  width: 5em !important;
   margin-right: 1em !important;
 }
 .userHeader {
   align-self: flex-end !important;
   margin: 0 !important;
-  font-size: 2em !important;
+  font-size: 1.7em !important;
 }
 .contentDiv {
   width: 75% !important;

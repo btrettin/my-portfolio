@@ -43,9 +43,9 @@
 }
 .rightMenuDiv {
   display: flex !important;
-  justify-content: space-evenly !important;
+  flex-grow: 1 !important;
+  justify-content: flex-end !important;
   align-items: center !important;
-  margin-right: 2em !important;
   margin-top: 1em !important;
 }
 .loginDiv {
@@ -56,6 +56,50 @@
 .accountIcon {
   color: white !important;
   font-size: 2.5em !important;
+}
+.menuButtonMower {
+  padding: 1em !important;
+  color: #fc5555 !important;
+  font-weight: bold !important;
+  margin-right: 2em !important;
+}
+.menuButtonMowerGray {
+  padding: 1em !important;
+  color: #fc5555 !important;
+  font-weight: bold !important;
+  margin-right: 2em !important;
+}
+.menuButton {
+  padding: 1em !important;
+  color: white !important;
+  font-weight: bold !important;
+  margin-right: 2em !important;
+}
+.menuButtonLast {
+  padding: 1em !important;
+  color: white !important;
+  font-weight: bold !important;
+  margin-right: 5em !important;
+}
+.menuButtonGray {
+  padding: 1em !important;
+  font-weight: bold !important;
+  color: #767676 !important;
+  margin-right: 2em !important;
+}
+.menuButtonGray:hover {
+  color: #2c2c2c !important;
+  background-color: white !important;
+}
+.menuButtonGrayLast {
+  padding: 1em !important;
+  font-weight: bold !important;
+  color: #767676 !important;
+  margin-right: 5em !important;
+}
+.menuButtonGrayLast:hover {
+  color: #2c2c2c !important;
+  background-color: white !important;
 }
 .menuItem {
   min-width: 10em !important;
@@ -97,4 +141,10 @@
 }
 .itemButton:hover {
   background-color: red !important;
+}
+.rightDiv {
+  display: flex !important;
+  margin-left: auto !important;
+  margin-right: 2em !important;
+  margin-top: 1em !important;
 }
