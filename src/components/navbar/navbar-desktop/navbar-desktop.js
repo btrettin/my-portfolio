@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { withRouter } from 'react-router';
 import PropTypes from 'prop-types';
 import AppBar from '@material-ui/core/AppBar';
 import Button from '@material-ui/core/Button';
@@ -15,13 +16,16 @@ import LoginModal from '../../../containers/connected-login';
 
 export const NavbarDesktop = (props) => {
   const [anchorEl, setAnchorEl] = useState(null);
-
   function handleClick(event) {
     setAnchorEl(event.currentTarget);
   }
 
   function handleClose() {
     setAnchorEl(null);
+  }
+  function handleAccount() {
+    handleClose();
+    props.history.push('/AccountPage');
   }
   function handleLogout() {
     try {
@@ -34,10 +38,19 @@ export const NavbarDesktop = (props) => {
     }
   }
   return (
-    <AppBar position="static" className={styles.Menu}>
+    <AppBar
+      position="static"
+      className={props.location.pathname === '/HomePage' ? styles.menuHomepage : styles.menu}
+    >
       <div className={styles.leftMenuDiv}>
         <Link to="/HomePage" className={styles.button}>
-          <Button className={styles.homeButton}>LawnNanny</Button>
+          <Button
+            className={
+              props.location.pathname === '/HomePage' ? styles.homeButton : styles.greenHomeButton
+            }
+          >
+            LawnNanny
+          </Button>
         </Link>
       </div>
       <div className={styles.rightMenuDiv}>
@@ -48,7 +61,7 @@ export const NavbarDesktop = (props) => {
               {/* A JSX comment   // <AccountIcon className={styles.accountIcon} /> */}
             </IconButton>
             <Menu
-              className={styles.menu}
+              className={styles.userMenu}
               id="simple-menu"
               anchorEl={anchorEl}
               open={Boolean(anchorEl)}
@@ -63,7 +76,7 @@ export const NavbarDesktop = (props) => {
                 horizontal: 'right',
               }}
             >
-              <MenuItem className={styles.menuItem} onClick={handleClose}>
+              <MenuItem className={styles.menuItem} onClick={handleAccount}>
                 Account
               </MenuItem>
               <MenuItem className={styles.menuItem} onClick={handleClose}>
@@ -91,10 +104,10 @@ export const NavbarDesktop = (props) => {
         ) : (
           <React.Fragment>
             <div className={styles.loginDiv}>
-              <LoginModal />
+              <LoginWithRouter />
             </div>
             <div className={styles.registerDiv}>
-              <RegisterModal />
+              <RegisterWithRouter />
             </div>
           </React.Fragment>
         )}
@@ -103,12 +116,19 @@ export const NavbarDesktop = (props) => {
   );
 };
 
+const LoginWithRouter = withRouter(LoginModal);
+const RegisterWithRouter = withRouter(RegisterModal);
+
 NavbarDesktop.propTypes = {
+  history: PropTypes.func,
+  location: PropTypes.func,
   isLoggedIn: PropTypes.func,
   setLoggedIn: PropTypes.func,
   setUser: PropTypes.func,
 };
 NavbarDesktop.defaultProps = {
+  history: PropTypes.func,
+  location: PropTypes.func,
   isLoggedIn: PropTypes.func,
   setLoggedIn: PropTypes.func,
   setUser: PropTypes.func,

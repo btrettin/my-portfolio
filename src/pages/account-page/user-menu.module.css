@@ -1,0 +1,18 @@
+.menu {
+}
+.menuItem,
+.menuItemTop {
+  margin: 1em !important;
+  padding: 1em !important;
+  font-size: 1.5em !important;
+  font-weight: bold !important;
+  color: #767676 !important;
+}
+.menuItemTop {
+  margin-top: 0em !important;
+}
+.menuItem:hover,
+.menuItemTop:hover {
+  color: #2c2c2c !important;
+  background-color: white !important;
+}

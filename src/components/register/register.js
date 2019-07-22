@@ -41,7 +41,14 @@ export const Register = (props) => {
   });
   return (
     <div>
-      <Button onClick={props.toggleRegister} className={styles.registerButton}>
+      <Button
+        onClick={props.toggleRegister}
+        className={
+          props.location.pathname === '/HomePage'
+            ? styles.registerButton
+            : styles.registerButtonBlack
+        }
+      >
         Register
       </Button>
       <Dialog className={styles.dialog} open={props.isRegisterOpen} onClose={props.toggleRegister}>
@@ -195,12 +202,14 @@ export const Register = (props) => {
 };
 
 Register.propTypes = {
+  location: PropTypes.func,
   isRegisterOpen: PropTypes.func,
   toggleRegister: PropTypes.func,
   swapModal: PropTypes.func,
 };
 
 Register.defaultProps = {
+  location: PropTypes.func,
   isRegisterOpen: PropTypes.func,
   toggleRegister: PropTypes.func,
   swapModal: PropTypes.func,

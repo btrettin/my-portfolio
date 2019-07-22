@@ -18,6 +18,9 @@
 .loginButton {
   color: white !important;
 }
+.loginButtonBlack {
+  color: black !important;
+}
 .forgotPassword {
   color: blue !important;
   cursor: pointer !important;
