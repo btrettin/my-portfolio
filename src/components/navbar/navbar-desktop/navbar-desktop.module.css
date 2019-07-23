@@ -26,7 +26,7 @@
   font-size: 2em !important;
   padding: 0em !important;
   margin-left: 2em !important;
-  margin-top: 1em !important;
+  margin-top: 0.5em !important;
 }
 .greenHomeButton {
   font-family: 'Courier New' !important;
@@ -35,7 +35,7 @@
   font-size: 2em !important;
   padding: 0em !important;
   margin-left: 2em !important;
-  margin-top: 1em !important;
+  margin-top: 0.5em !important;
 }
 .leftMenuDiv {
   display: flex !important;
