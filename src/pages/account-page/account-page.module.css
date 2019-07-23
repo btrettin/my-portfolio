@@ -16,17 +16,19 @@
 }
 .upperDiv {
   display: flex !important;
+  border-bottom: 1px solid #767676 !important;
 }
 .lowerDiv {
   display: flex !important;
 }
 .leftDiv {
   width: 25% !important;
+  margin-right: 5em !important;
 }
 .userImageDiv {
   padding-bottom: 2em !important;
   display: flex !important;
-  border-bottom: 1px solid #767676 !important;
+  margin-left: 1.5em !important;
 }
 .imageIcon {
   height: 5em !important;
@@ -39,9 +41,16 @@
   align-self: flex-end !important;
   margin: 0 !important;
   font-size: 1.7em !important;
+  color: #2c2c2c !important;
 }
 .contentDiv {
   width: 75% !important;
   display: flex !important;
   flex-direction: column !important;
+  margin-top: 2em !important;
+}
+.formHeader {
+  color: #505050 !important;
+  margin-left: 0.4em !important;
+  font-size: 2em !important;
 }

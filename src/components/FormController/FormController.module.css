@@ -1,5 +1,6 @@
 .controller {
   width: inherit !important;
+  flex-grow: 1 !important;
 }
 .input {
   font-size: 1.4em !important;

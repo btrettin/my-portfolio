@@ -1,10 +1,12 @@
-import React from 'react';
+import React, { useState } from 'react';
 import * as Yup from 'yup';
 import { Formik, Form, Field, ErrorMessage } from 'formik';
+import Button from '@material-ui/core/Button';
 import { FormController } from '../../../../components/FormController/FormController';
 import styles from './profile-form.module.css';
 
 export const ProfileForm = () => {
+  const [disabled, setDisabled] = useState(false);
   const firstNameIsTooShortMessage = 'First name is too short!';
   const firstNameISTooLongMessage = 'First name is too long!';
   const lastNameIsTooShortMessage = 'Last name is too short!';
@@ -23,13 +25,6 @@ export const ProfileForm = () => {
     email: Yup.string()
       .email(invalidEmailMessage)
       .required('Required*'),
-    password: Yup.string()
-      .required('Required*')
-      .min(8, 'Password must be at least 8 characters long')
-      .matches(/[a-zA-Z]/, 'Password can only contain Latin letters')
-      .matches(/[a-z]/, 'Password must include 1 lower case letter')
-      .matches(/[A-Z]/, 'Password must include 1 upper case letter')
-      .matches(/[A-Z]/, 'Password must include 1 number'),
   });
   return (
     <Formik
@@ -37,7 +32,6 @@ export const ProfileForm = () => {
         firstName: '',
         lastName: '',
         email: '',
-        password: '',
       }}
       validationSchema={ProfileSchema}
       onSubmit={(values, actions) => {
@@ -50,8 +44,8 @@ export const ProfileForm = () => {
       {formikProps => (
         <div>
           <Form className={styles.form}>
-            <div id="nameFields" className={styles.fieldDivRow}>
-              <div id="firstnameField" className={styles.fieldFirstName}>
+            <div id="nameFields" className={styles.row}>
+              <div id="firstnameField" className={styles.field}>
                 <Field
                   name="firstName"
                   render={({ field, form }) => (
@@ -64,9 +58,9 @@ export const ProfileForm = () => {
                     />
                   )}
                 />
-                <ErrorMessage className={styles.errorMessage} name="firstName" component="div" />
+                <ErrorMessage className={styles.error} name="firstName" component="div" />
               </div>
-              <div id="lastnameField" className={styles.fieldLastName}>
+              <div id="lastnameField" className={styles.field}>
                 <Field
                   name="lastName"
                   render={({ field, form }) => (
@@ -79,12 +73,11 @@ export const ProfileForm = () => {
                     />
                   )}
                 />
-                <ErrorMessage className={styles.errorMessage} name="lastName" component="div" />
+                <ErrorMessage className={styles.error} name="lastName" component="div" />
               </div>
             </div>
-            <div id="emailField" className={styles.fieldDiv}>
+            <div id="emailField" className={styles.field}>
               <Field
-                className={styles.fieldColumn}
                 name="email"
                 render={({ field, form }) => (
                   <FormController
@@ -96,32 +89,20 @@ export const ProfileForm = () => {
                   />
                 )}
               />
-              <ErrorMessage className={styles.errorMessage} name="email" component="div" />
+              <ErrorMessage className={styles.error} name="email" component="div" />
             </div>
-            <div id="passwordField" className={styles.fieldDiv}>
-              <Field
-                className={styles.fieldColumn}
-                name="password"
-                render={({ field, form }) => (
-                  <FormController
-                    type="password"
-                    label="Password"
-                    id="passwordFormController"
-                    form={form}
-                    field={field}
-                  />
-                )}
-              />
-              <ErrorMessage className={styles.errorMessage} name="password" component="div" />
-            </div>
-            <React.Fragment>
-              <button className={styles.button} type="submit">
-                Sign Up
-              </button>
+            <div className={styles.buttonDiv}>
+              <Button
+                className={{ disabled } ? styles.button : styles.button}
+                disabled={disabled}
+                type="submit"
+              >
+                Save
+              </Button>
               <ErrorMessage>
-                {() => <div className={styles.errorMessage}>{formikProps.errors.general}</div>}
+                {() => <div className={styles.error}>{formikProps.errors.general}</div>}
               </ErrorMessage>
-            </React.Fragment>
+            </div>
           </Form>
         </div>
       )}

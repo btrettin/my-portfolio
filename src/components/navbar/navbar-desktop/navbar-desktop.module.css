@@ -22,6 +22,7 @@
 .homeButton {
   font-family: 'Courier New' !important;
   text-transform: none !important;
+  font-weight: bold !important;
   color: white !important;
   font-size: 2em !important;
   padding: 0em !important;
@@ -30,8 +31,9 @@
 }
 .greenHomeButton {
   font-family: 'Courier New' !important;
+  font-weight: bold !important;
   text-transform: none !important;
-  color: green !important;
+  color: #25d725 !important;
   font-size: 2em !important;
   padding: 0em !important;
   margin-left: 2em !important;
