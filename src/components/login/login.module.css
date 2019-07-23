@@ -17,9 +17,15 @@
 }
 .loginButton {
   color: white !important;
+  font-weight: bold !important;
 }
 .loginButtonBlack {
-  color: black !important;
+  color: #767676 !important;
+  font-weight: bold !important;
+}
+.loginButtonBlack:hover {
+  color: #2c2c2c !important;
+  background-color: white !important;
 }
 .forgotPassword {
   color: blue !important;

@@ -58,16 +58,26 @@
   font-size: 2.5em !important;
 }
 .menuButtonMower {
-  padding: 1em !important;
-  color: #fc5555 !important;
+  padding: 0.8em !important;
+  color: white !important;
+  background-color: #fc5555 !important;
   font-weight: bold !important;
   margin-right: 2em !important;
 }
+.menuButtonMower:hover {
+  background-color: red !important;
+}
 .menuButtonMowerGray {
-  padding: 1em !important;
+  padding: 0.8em !important;
   color: #fc5555 !important;
   font-weight: bold !important;
   margin-right: 2em !important;
+  border: 1px solid #fc5555 !important;
+}
+.menuButtonMowerGray:hover {
+  background-color: #ffdede !important;
+  color: red !important;
+  border: 1px solid red !important;
 }
 .menuButton {
   padding: 1em !important;
@@ -143,6 +153,7 @@
   background-color: red !important;
 }
 .rightDiv {
+  align-items: center !important;
   display: flex !important;
   margin-left: auto !important;
   margin-right: 2em !important;

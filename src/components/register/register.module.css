@@ -1,10 +1,18 @@
 .registerButton {
+  padding: 0.6em !important;
   color: white !important;
+  font-weight: bold !important;
   border: 1px solid white !important;
 }
 .registerButtonBlack {
-  color: black !important;
-  border: 1px solid black !important;
+  padding: 0.6em !important;
+  color: #767676 !important;
+  font-weight: bold !important;
+  border: 1px solid #767676 !important;
+}
+.registerButtonBlack:hover {
+  color: #2c2c2c !important;
+  border: 1px solid #2c2c2c !important;
 }
 .title {
   align-self: center !important;
