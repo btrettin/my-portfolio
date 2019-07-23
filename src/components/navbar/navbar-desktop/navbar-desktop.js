@@ -49,8 +49,7 @@ export const NavbarDesktop = (props) => {
               props.location.pathname === '/HomePage' ? styles.homeButton : styles.greenHomeButton
             }
           >
-            <em className={styles.lawn}>Lawn</em>
-            <em className={styles.nanny}>Nanny</em>
+            LawnNanny
           </Button>
         </Link>
       </div>
