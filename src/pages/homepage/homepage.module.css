@@ -24,7 +24,7 @@
   text-align: center !important;
   font-weight: normal !important;
   color: white !important;
-  font-size: 2.5em !important;
+  font-size: 2.2em !important;
 }
 .content {
   color: white !important;
@@ -33,12 +33,12 @@
 }
 .startButton {
   margin-top: 1.5em !important;
-  background-color: #0d960d !important;
+  background-color: #299e00 !important;
   border-radius: 5px !important;
   padding: 6px 16px !important;
   color: white !important;
   font-size: 1em !important;
 }
 .startButton:hover {
-  background-color: #14e014 !important;
+  background-color: #175a00 !important;
 }
