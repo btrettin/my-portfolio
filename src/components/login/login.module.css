@@ -14,6 +14,7 @@
   padding: 0.4em !important;
   margin: 0 !important;
   min-width: 24px !important;
+  font-size: 1.3em !important;
 }
 .loginButton {
   color: white !important;
@@ -32,7 +33,8 @@
   cursor: pointer !important;
   background-color: white !important;
   border: none !important;
-  margin-top: 0.3em !important;
+  font-size: 1.4em !important;
+  margin-top: 0.5em !important;
 }
 .closeIcon {
   color: black !important;
@@ -69,14 +71,12 @@
   display: flex !important;
   flex-direction: column !important;
   align-items: center !important;
-  padding: 0em !important;
-  padding-top: 0.5em !important;
-  max-width: 20em !important;
+  padding: 2em 5em 1em 5em !important;
 }
 .modalHeader {
   display: flex !important;
   justify-content: center !important;
-  font-size: 2rem !important;
+  font-size: 3rem !important;
   background-color: white !important;
   border-bottom: none !important;
   padding: 0 !important;
@@ -85,11 +85,11 @@
   align-items: center !important;
 }
 .headerText {
-  font-size: 1.5em !important;
-  color: #3bc401 !important;
+  font-size: 2.3em !important;
+  color: #299e00 !important;
 }
 .modalButton {
-  background-color: #25ff03 !important;
+  background-color: #299e00 !important;
   color: white !important;
 }
 
@@ -109,15 +109,15 @@
 .signupDiv {
   flex-grow: 0 !important;
   display: flex !important;
-  justify-content: space-evenly !important;
+  justify-content: center !important;
   align-items: center !important;
   width: 100% !important;
   height: 30% !important;
   margin-bottom: 1em;
-  margin-top: 1em;
+  margin-top: 2.5em;
 }
 .signupText {
-  font-size: 1em !important;
+  font-size: 1.5em !important;
   margin: 0em !important;
   padding-right: 0.5em !important;
 }
@@ -129,5 +129,5 @@
   border-radius: 0 !important;
   padding: 3px 4px !important;
   font-weight: bold !important;
-  font-size: 0.85em !important;
+  font-size: 1.3em !important;
 }

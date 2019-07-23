@@ -75,19 +75,19 @@ const HomePage = () => (
         <div className={styles.connectDiv}>
           <h1 className={styles.connectHeader}> Connect </h1>
           <IconButton className={styles.fb}>
-            <Avatar src={Fb} />
+            <Avatar src={Fb} className={styles.avatar} />
           </IconButton>
           <IconButton className={styles.insta}>
-            <Avatar src={Insta} />
+            <Avatar src={Insta} className={styles.avatar} />
           </IconButton>
           <IconButton className={styles.tw}>
-            <Avatar src={Twitter} />
+            <Avatar src={Twitter} className={styles.avatar} />
           </IconButton>
           <IconButton className={styles.yt}>
-            <Avatar src={Yt} />
+            <Avatar src={Yt} className={styles.avatar} />
           </IconButton>
           <IconButton className={styles.pin}>
-            <Avatar src={Pin} />
+            <Avatar src={Pin} className={styles.avatar} />
           </IconButton>
         </div>
       </div>

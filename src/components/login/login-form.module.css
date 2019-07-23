@@ -11,37 +11,44 @@
 .formHeader {
 }
 .addressContainer {
-  margin: 0.3em 0em !important;
+  margin: 0.8em 0em !important;
   width: 100% !important;
 }
+.visibility {
+  font-size: 1.7em !important;
+}
 .addressContainerError {
-  margin: 0.3em 0em !important;
+  margin: 0.8em 0em !important;
   width: 100% !important;
   border: 2px solid red !important;
 }
+.field {
+  padding-top: 0.5em !important;
+}
 .fieldLabel {
-  font-size: 1.2em !important;
+  font-size: 2em !important;
 }
 .fieldLabelError {
-  font-size: 1.2em !important;
-  color: red !important;
+  font-size: 2em !important;
+  color: #ff5542 !important;
 }
 .input {
-  font-size: 1.4em !important;
+  font-size: 2.2em !important;
+  margin-top: 24px !important;
 }
 .inputError {
-  font-size: 1.2em !important;
+  font-size: 1.5em !important;
   margin-top: 0em !important;
-  color: red !important;
+  color: #ff5542 !important;
 }
 .submitButton {
-  width: 100%;
-  background-color: #3bc401;
-  border: 0;
-  height: 2em;
-  font-size: 1.3em;
-  border-radius: 5px;
-  color: white;
-  margin-top: 0.3em;
-  margin-bottom: 0.2em;
+  width: 100% !important;
+  background-color: #299e00 !important;
+  border: 0 !important;
+  height: 2em !important;
+  font-size: 2em !important;
+  border-radius: 5px !important;
+  color: white !important;
+  margin-top: 1em !important;
+  margin-bottom: 0.2em !important;
 }

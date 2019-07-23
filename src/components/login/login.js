@@ -27,7 +27,7 @@ const LoginModal = props => (
     >
       <div className={styles.contentDiv}>
         <DialogTitle id="form-dialog-title" className={styles.modalHeader}>
-          <h2 className={styles.headerText}> LawnNanny </h2>
+          <h2 className={styles.headerText}> Sign In to LawnNanny </h2>
         </DialogTitle>
         <DialogContent className={styles.loginContent}>
           <LoginForm

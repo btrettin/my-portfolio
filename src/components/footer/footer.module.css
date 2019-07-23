@@ -9,6 +9,7 @@
   align-items: center !important;
   justify-content: center !important;
   margin: 5em 2em 0em 2em !important;
+  padding-top: 10em !important;
 }
 .gridItem {
   width: 100% !important;
@@ -50,7 +51,7 @@
   justify-content: space-between !important;
 }
 .copyright {
-  font-size: 1.6em !important;
+  font-size: 1.2em !important;
   color: #b6b6b6 !important;
   font-weight: lighter !important;
 }
@@ -60,10 +61,14 @@
   justify-content: space-evenly !important;
 }
 .connectHeader {
-  font-size: 1.8em !important;
+  font-size: 1.4em !important;
   color: #2c2c2c !important;
   margin: 0 !important;
   margin-right: 1em !important;
+}
+.avatar {
+  height: 30px !important;
+  width: 30px !important;
 }
 .fb,
 .insta,
