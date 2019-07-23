@@ -7,7 +7,7 @@ import styles from './account-page.module.css';
 
 const AccountPage = () => (
   <Grid container className={styles.container}>
-    <Grid item xl={11} lg={11} md={12} sm={12} xs={12} className={styles.gridItem}>
+    <Grid item xl={11} lg={11} md={11} sm={11} xs={11} className={styles.gridItem}>
       <div className={styles.leftDiv}>
         <div className={styles.userImageDiv}>
           <Avatar className={styles.imageIcon} alt="Remy Sharp" src={Lbj} />

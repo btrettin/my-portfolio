@@ -1,11 +1,11 @@
 .registerButton {
-  padding: 0.6em !important;
+  padding: 0.5em !important;
   color: white !important;
   font-weight: bold !important;
   border: 1px solid white !important;
 }
 .registerButtonBlack {
-  padding: 0.6em !important;
+  padding: 0.5em !important;
   color: #767676 !important;
   font-weight: bold !important;
   border: 1px solid #767676 !important;
