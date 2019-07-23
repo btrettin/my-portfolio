@@ -11,6 +11,7 @@ import App from '../components/app';
 import Navbar from '../containers/connected-navbar';
 import RequestPageComponent from '../pages/request-page';
 import AccountPageComponent from '../pages/account-page';
+import Footer from '../components/footer';
 import reducers from '../reducers';
 import styles from '../components/app/app.module.css';
 
@@ -47,6 +48,7 @@ export const Routes = () => {
                 <Route exact path="/AccountPage" component={AccountPageComponent} />
                 <Route path="/*" component={Error404} />
               </Switch>
+              <Footer />
             </div>
           )}
         />

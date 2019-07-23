@@ -1,0 +1,89 @@
+.logoDiv {
+  width: 100% !important;
+  display: flex !important;
+}
+.footerContainer {
+  height: 40em !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+  margin: 5em 2em 0em 2em !important;
+}
+.gridItem {
+  width: 100% !important;
+}
+.footerTop {
+  height: 30em !important;
+  width: 100% !important;
+  display: flex !important;
+  flex-direction: column !important;
+  margin-bottom: 2em !important;
+}
+.menus {
+  display: flex !important;
+  justify-content: space-between !important;
+}
+.important {
+  display: flex !important;
+  flex-grow: 1 !important;
+  align-items: flex-end !important;
+}
+.terms {
+  color: #2c2c2c !important;
+}
+.menuItemTop {
+  font-size: 1.3em !important;
+  color: #2c2c2c !important;
+  font-weight: bold !important;
+}
+.menuItem {
+  font-size: 1.2em !important;
+  color: #767676 !important;
+}
+.footerBottom {
+  height: 10em !important;
+  border-top: 2px solid #f0f0f0;
+  width: 100% !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+}
+.copyright {
+  font-size: 1.6em !important;
+  color: #b6b6b6 !important;
+  font-weight: lighter !important;
+}
+.connectDiv {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-evenly !important;
+}
+.connectHeader {
+  font-size: 1.8em !important;
+  color: #2c2c2c !important;
+  margin: 0 !important;
+  margin-right: 1em !important;
+}
+.fb,
+.insta,
+.tw,
+.yt,
+.pin {
+  padding: 5px !important;
+}
+.fb:hover {
+  background-color: #3b5998 !important;
+}
+.insta:hover {
+  background-color: #fbad50 !important;
+}
+.tw:hover {
+  background-color: #38a1f3 !important;
+}
+.yt:hover {
+  background-color: #c4302b !important;
+}
+.pin:hover {
+  background-color: #c8232c !important;
+}
