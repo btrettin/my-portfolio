@@ -33,9 +33,12 @@
 }
 .startButton {
   margin-top: 1.5em !important;
-  background-color: none !important;
-  border-radius: 10px !important;
-  border: 2px solid white !important;
+  background-color: #0d960d !important;
+  border-radius: 5px !important;
+  padding: 6px 16px !important;
   color: white !important;
-  font-size: 1.2em !important;
+  font-size: 1em !important;
+}
+.startButton:hover {
+  background-color: #14e014 !important;
 }

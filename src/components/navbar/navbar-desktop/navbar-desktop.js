@@ -5,12 +5,12 @@ import PropTypes from 'prop-types';
 import AppBar from '@material-ui/core/AppBar';
 import Button from '@material-ui/core/Button';
 import IconButton from '@material-ui/core/IconButton';
-// import AccountIcon from '@material-ui/icons/AccountCircle';
+import Avatar from '@material-ui/core/Avatar';
 import MenuItem from '@material-ui/core/MenuItem';
 import Menu from '@material-ui/core/Menu';
 import { Auth } from 'aws-amplify';
 import styles from './navbar-desktop.module.css';
-import Lbj from './Lbj2.jpg';
+import Steph from './steph.jpg';
 import RegisterModal from '../../../containers/connected-register';
 import LoginModal from '../../../containers/connected-login';
 
@@ -54,15 +54,7 @@ export const NavbarDesktop = (props) => {
         </Link>
       </div>
       <div className={styles.rightMenuDiv}>
-        <Button
-          className={
-            props.location.pathname === '/HomePage'
-              ? styles.menuButtonMower
-              : styles.menuButtonMowerGray
-          }
-        >
-          Become a Mower
-        </Button>
+        <Button className={styles.menuButtonMower}>Become a Mower</Button>
         <Button
           className={
             props.location.pathname === '/HomePage' ? styles.menuButton : styles.menuButtonGray
@@ -90,8 +82,7 @@ export const NavbarDesktop = (props) => {
       {props.isLoggedIn ? (
         <div className={styles.rightDiv}>
           <IconButton onClick={handleClick} className={styles.accountButton}>
-            <img src={Lbj} alt="Avatar" className={styles.imageIcon} />
-            {/* A JSX comment   // <AccountIcon className={styles.accountIcon} /> */}
+            <Avatar src={Steph} className={styles.imageIcon} />
           </IconButton>
           <Menu
             className={styles.userMenu}

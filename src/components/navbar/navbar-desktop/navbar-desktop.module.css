@@ -19,7 +19,8 @@
 .menuHomepage {
   background: none !important;
 }
-.homeButton {
+.homeButton,
+.greenHomeButton {
   font-family: 'Courier New' !important;
   text-transform: none !important;
   font-weight: bold !important;
@@ -30,20 +31,14 @@
   margin-top: 0.5em !important;
 }
 .greenHomeButton {
-  font-family: 'Courier New' !important;
-  font-weight: bold !important;
-  text-transform: none !important;
   color: #25d725 !important;
-  font-size: 2em !important;
-  padding: 0em !important;
-  margin-left: 2em !important;
-  margin-top: 0.5em !important;
 }
 .leftMenuDiv {
   display: flex !important;
   align-items: center !important;
 }
 .rightMenuDiv {
+  margin-right: 10em !important;
   display: flex !important;
   flex-grow: 1 !important;
   justify-content: flex-end !important;
@@ -51,7 +46,7 @@
   margin-top: 1em !important;
 }
 .loginDiv {
-  margin-right: 2em !important;
+  margin-right: 1em !important;
 }
 .accountButton {
 }
@@ -69,18 +64,6 @@
 .menuButtonMower:hover {
   background-color: red !important;
 }
-.menuButtonMowerGray {
-  padding: 0.6em !important;
-  color: #fc5555 !important;
-  font-weight: bold !important;
-  margin-right: 2em !important;
-  border: 1px solid #fc5555 !important;
-}
-.menuButtonMowerGray:hover {
-  background-color: #ffdede !important;
-  color: red !important;
-  border: 1px solid red !important;
-}
 .menuButton {
   padding: 1em !important;
   color: white !important;
@@ -91,7 +74,6 @@
   padding: 1em !important;
   color: white !important;
   font-weight: bold !important;
-  margin-right: 5em !important;
 }
 .menuButtonGray {
   padding: 1em !important;
@@ -107,7 +89,6 @@
   padding: 1em !important;
   font-weight: bold !important;
   color: #767676 !important;
-  margin-right: 5em !important;
 }
 .menuButtonGrayLast:hover {
   color: #2c2c2c !important;
