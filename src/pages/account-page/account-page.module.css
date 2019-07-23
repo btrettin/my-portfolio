@@ -10,6 +10,15 @@
 .gridItem {
   height: 75% !important;
   display: flex !important;
+  flex-direction: column !important;
+}
+.headerDiv {
+}
+.upperDiv {
+  display: flex !important;
+}
+.lowerDiv {
+  display: flex !important;
 }
 .leftDiv {
   width: 25% !important;
@@ -33,4 +42,6 @@
 }
 .contentDiv {
   width: 75% !important;
+  display: flex !important;
+  flex-direction: column !important;
 }
