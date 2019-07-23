@@ -6,7 +6,7 @@ import { FormController } from '../../../../components/FormController/FormContro
 import styles from './profile-form.module.css';
 
 export const ProfileForm = () => {
-  const [disabled, setDisabled] = useState(false);
+  const [disabled] = useState(false);
   const firstNameIsTooShortMessage = 'First name is too short!';
   const firstNameISTooLongMessage = 'First name is too long!';
   const lastNameIsTooShortMessage = 'Last name is too short!';
