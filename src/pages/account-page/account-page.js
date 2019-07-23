@@ -31,7 +31,7 @@ const AccountPage = () => {
   };
   return (
     <Grid container className={styles.container}>
-      <Grid item xl={11} lg={11} md={11} className={styles.gridItem}>
+      <Grid item xl={7} lg={9} md={11} className={styles.gridItem}>
         <div className={styles.upperDiv}>
           <div className={styles.userImageDiv}>
             <Avatar className={styles.imageIcon} alt="Remy Sharp" src={Lbj} />

@@ -8,7 +8,7 @@
   justify-content: center !important;
 }
 .gridItem {
-  height: 75% !important;
+  height: 70% !important;
   display: flex !important;
   flex-direction: column !important;
 }
@@ -22,7 +22,7 @@
   display: flex !important;
 }
 .leftDiv {
-  width: 25% !important;
+  width: 30% !important;
   margin-right: 5em !important;
 }
 .userImageDiv {

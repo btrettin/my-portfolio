@@ -21,6 +21,15 @@ const AccountPage = props => (
     <MenuItem className={styles.menuItem} onClick={() => props.setForm('Privacy')}>
       Privacy
     </MenuItem>
+    <MenuItem className={styles.menuItem} onClick={() => props.setForm('Privacy')}>
+      Security
+    </MenuItem>
+    <MenuItem className={styles.menuItem} onClick={() => props.setForm('Privacy')}>
+      Support
+    </MenuItem>
+    <MenuItem className={styles.menuItemMower} onClick={() => props.setForm('Privacy')}>
+      Become a Mower
+    </MenuItem>
   </MenuList>
 );
 AccountPage.propTypes = {
