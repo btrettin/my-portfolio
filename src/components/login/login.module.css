@@ -71,7 +71,7 @@
   display: flex !important;
   flex-direction: column !important;
   align-items: center !important;
-  padding: 2em 3em 1em 5em !important;
+  padding: 2em 3em 1em 3em !important;
 }
 .modalHeader {
   display: flex !important;
