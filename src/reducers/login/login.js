@@ -26,6 +26,8 @@ export default (state = getInitialState(), action) => {
       return setState({
         isLoginOpen: !state.isLoginOpen,
         isRegisterOpen: !state.isRegisterOpen,
+        user: null,
+        isLoggedIn: false,
       });
     default:
       return state;

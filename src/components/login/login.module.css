@@ -4,7 +4,7 @@
   margin-top: 0.5em;
 }
 .forgotText {
-  font-size: 1.1em;
+  font-size: 1em;
   font-weight: 100;
 }
 .closeButton {
@@ -14,7 +14,7 @@
   padding: 0.4em !important;
   margin: 0 !important;
   min-width: 24px !important;
-  font-size: 1.3em !important;
+  font-size: 1.1em !important;
 }
 .loginButton {
   color: white !important;
@@ -33,12 +33,12 @@
   cursor: pointer !important;
   background-color: white !important;
   border: none !important;
-  font-size: 1.4em !important;
+  font-size: 1.2em !important;
   margin-top: 0.5em !important;
 }
 .closeIcon {
   color: black !important;
-  font-size: 2em !important;
+  font-size: 1.8em !important;
 }
 .modalAction {
   margin: 0em !important;
@@ -71,12 +71,12 @@
   display: flex !important;
   flex-direction: column !important;
   align-items: center !important;
-  padding: 2em 3em 1em 3em !important;
+  padding: 2em 2em 1em 2em !important;
 }
 .modalHeader {
   display: flex !important;
   justify-content: center !important;
-  font-size: 3rem !important;
+  font-size: 2.5rem !important;
   background-color: white !important;
   border-bottom: none !important;
   padding: 0 !important;
@@ -85,7 +85,7 @@
   align-items: center !important;
 }
 .headerText {
-  font-size: 2.1em !important;
+  font-size: 1.8em !important;
   color: #299e00 !important;
 }
 .modalButton {
@@ -117,7 +117,7 @@
   margin-top: 2.5em;
 }
 .signupText {
-  font-size: 1.5em !important;
+  font-size: 1.3em !important;
   margin: 0em !important;
   padding-right: 0.5em !important;
 }
@@ -129,5 +129,5 @@
   border-radius: 0 !important;
   padding: 3px 4px !important;
   font-weight: bold !important;
-  font-size: 1.2em !important;
+  font-size: 1em !important;
 }
