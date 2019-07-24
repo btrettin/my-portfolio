@@ -18,11 +18,11 @@ const initialValues = {
   email: '',
   password: '',
 };
-const firstNameIsTooShortMessage = 'First name is too short!';
-const firstNameISTooLongMessage = 'First name is too long!';
-const lastNameIsTooShortMessage = 'Last name is too short!';
-const lastNameISTooLongMessage = 'Last name is too long!';
-const invalidEmailMessage = 'Not a valid Email!';
+const firstNameIsTooShortMessage = 'First name is too short';
+const firstNameISTooLongMessage = 'First name is too long';
+const lastNameIsTooShortMessage = 'Last name is too short';
+const lastNameISTooLongMessage = 'Last name is too long';
+const invalidEmailMessage = 'Not a valid Email';
 const SignupSchema = Yup.object().shape({
   firstName: Yup.string()
     .min(2, firstNameIsTooShortMessage)
@@ -37,11 +37,10 @@ const SignupSchema = Yup.object().shape({
     .required('Required*'),
   password: Yup.string()
     .required('Required*')
-    .min(8, 'Password must be at least 8 characters long')
-    .matches(/[a-zA-Z]/, 'Password can only contain Latin letters')
-    .matches(/[a-z]/, 'Password must include 1 lower case letter')
-    .matches(/[A-Z]/, 'Password must include 1 upper case letter')
-    .matches(/[A-Z]/, 'Password must include 1 number'),
+    .min(8, 'Must be at least 8 characters long')
+    .matches(/[a-z]/, 'Must include 1 lower case letter')
+    .matches(/[A-Z]/, 'Must include 1 upper case letter')
+    .matches(/[A-Z]/, 'Must include 1 number'),
 });
 const LoginFormComponent = (props) => {
   const [showPassword, set] = useState(false);

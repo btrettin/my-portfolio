@@ -30,7 +30,7 @@
 }
 .fieldLabelError {
   font-size: 1.7em !important;
-  color: #ff5542 !important;
+  color: #ff351e !important;
 }
 .input {
   font-size: 1.5em !important;
@@ -39,7 +39,7 @@
 .inputError {
   font-size: 1.3em !important;
   margin-top: 0em !important;
-  color: #ff5542 !important;
+  color: #ff351e !important;
 }
 .submitButton {
   width: 100% !important;
