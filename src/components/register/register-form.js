@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Formik, Field, Form, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
+import { Auth } from 'aws-amplify';
 import FormControl from '@material-ui/core/FormControl';
 import Input from '@material-ui/core/Input';
 import InputAdornment from '@material-ui/core/InputAdornment';
@@ -17,23 +18,62 @@ const initialValues = {
   email: '',
   password: '',
 };
-const LoginFormComponent = () => {
+const firstNameIsTooShortMessage = 'First name is too short!';
+const firstNameISTooLongMessage = 'First name is too long!';
+const lastNameIsTooShortMessage = 'Last name is too short!';
+const lastNameISTooLongMessage = 'Last name is too long!';
+const invalidEmailMessage = 'Not a valid Email!';
+const SignupSchema = Yup.object().shape({
+  firstName: Yup.string()
+    .min(2, firstNameIsTooShortMessage)
+    .max(30, firstNameISTooLongMessage)
+    .required('Required*'),
+  lastName: Yup.string()
+    .min(2, lastNameIsTooShortMessage)
+    .max(30, lastNameISTooLongMessage)
+    .required('Required*'),
+  email: Yup.string()
+    .email(invalidEmailMessage)
+    .required('Required*'),
+  password: Yup.string()
+    .required('Required*')
+    .min(8, 'Password must be at least 8 characters long')
+    .matches(/[a-zA-Z]/, 'Password can only contain Latin letters')
+    .matches(/[a-z]/, 'Password must include 1 lower case letter')
+    .matches(/[A-Z]/, 'Password must include 1 upper case letter')
+    .matches(/[A-Z]/, 'Password must include 1 number'),
+});
+const LoginFormComponent = (props) => {
   const [showPassword, set] = useState(false);
   return (
     <div className={styles.formContainer}>
       <Formik
-        validationSchema={Yup.object({
-          email: Yup.string()
-            .email('Not a valid email address')
-            .required('Required*'),
-          password: Yup.string().required('Required*'),
-        })}
+        validationSchema={SignupSchema}
         initialValues={initialValues}
-        onSubmit={(values, { setSubmitting }) => {
-          setTimeout(() => {
-            alert(JSON.stringify(values, null, 2));
-            setSubmitting(false);
-          }, 400);
+        onSubmit={async (values, actions) => {
+          const firstName = values.firstName;
+          const lastName = values.lastName;
+          const password = values.password;
+          const username = values.email;
+          try {
+            const user = await Auth.signUp({
+              username,
+              password,
+              attributes: {
+                email: username,
+                given_name: firstName,
+                family_name: lastName,
+              },
+            });
+            console.log(user);
+            props.toggleRegister();
+            props.setLoggedIn(true);
+            props.setUser(user);
+            return actions.setSubmitting(false);
+          } catch (error) {
+            actions.setFieldError('general', error.message);
+            return actions.setSubmitting(false);
+          }
         }}
       >
         {formikProps => (

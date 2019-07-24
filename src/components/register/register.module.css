@@ -86,7 +86,7 @@
   align-items: center !important;
 }
 .headerText {
-  font-size: 1.8em !important;
+  font-size: 2em !important;
   color: #299e00 !important;
 }
 .modalButton {
@@ -115,7 +115,7 @@
   width: 100% !important;
   height: 30% !important;
   margin-bottom: 1em;
-  margin-top: 2.5em;
+  margin-top: 1.5em;
 }
 .signupText {
   font-size: 1.3em !important;

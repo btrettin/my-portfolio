@@ -1,37 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuites name="jest tests" tests="9" failures="0" time="47.453">
-  <testsuite name="redux action with data" errors="0" failures="0" skipped="0" timestamp="2019-07-23T19:59:36" time="9.103" tests="1">
-    <testcase classname="redux action with data should return a lambda that returns an object with data and action type" name="redux action with data should return a lambda that returns an object with data and action type" time="0.014">
+<testsuites name="jest tests" tests="9" failures="0" time="46.863">
+  <testsuite name="redux action with data" errors="0" failures="0" skipped="0" timestamp="2019-07-24T19:23:22" time="8.927" tests="1">
+    <testcase classname="redux action with data should return a lambda that returns an object with data and action type" name="redux action with data should return a lambda that returns an object with data and action type" time="0.016">
     </testcase>
   </testsuite>
-  <testsuite name="toggle login modal action" errors="0" failures="0" skipped="0" timestamp="2019-07-23T19:59:36" time="9.162" tests="2">
-    <testcase classname="toggle login modal action should return a lambda that returns an object with the toggleSignupModal action" name="toggle login modal action should return a lambda that returns an object with the toggleSignupModal action" time="0.011">
+  <testsuite name="toggle login modal action" errors="0" failures="0" skipped="0" timestamp="2019-07-24T19:23:22" time="9.009" tests="2">
+    <testcase classname="toggle login modal action should return a lambda that returns an object with the toggleSignupModal action" name="toggle login modal action should return a lambda that returns an object with the toggleSignupModal action" time="0.015">
     </testcase>
     <testcase classname="swap modal action should return a lambda that returns an object with the swapModal action" name="swap modal action should return a lambda that returns an object with the swapModal action" time="0.001">
     </testcase>
   </testsuite>
-  <testsuite name="404 Error" errors="0" failures="0" skipped="0" timestamp="2019-07-23T19:59:36" time="9.89" tests="1">
-    <testcase classname="404 Error is a reidrect" name="404 Error is a reidrect" time="0.026">
+  <testsuite name="404 Error" errors="0" failures="0" skipped="0" timestamp="2019-07-24T19:23:22" time="9.577" tests="1">
+    <testcase classname="404 Error is a reidrect" name="404 Error is a reidrect" time="0.025">
     </testcase>
   </testsuite>
-  <testsuite name="Home Page" errors="0" failures="0" skipped="0" timestamp="2019-07-23T19:59:45" time="3.214" tests="1">
+  <testsuite name="Home Page" errors="0" failures="0" skipped="0" timestamp="2019-07-24T19:23:31" time="3.21" tests="1">
     <testcase classname="Home Page is wrapped in a Grid" name="Home Page is wrapped in a Grid" time="0.009">
     </testcase>
   </testsuite>
-  <testsuite name="Connected Login Modal" errors="0" failures="0" skipped="0" timestamp="2019-07-23T19:59:36" time="19.421" tests="1">
-    <testcase classname="Connected Login Modal has the correct props" name="Connected Login Modal has the correct props" time="0.036">
+  <testsuite name="Connected Login Modal" errors="0" failures="0" skipped="0" timestamp="2019-07-24T19:23:22" time="19.839" tests="1">
+    <testcase classname="Connected Login Modal has the correct props" name="Connected Login Modal has the correct props" time="0.03">
     </testcase>
   </testsuite>
-  <testsuite name="Connected Login Modal" errors="0" failures="0" skipped="0" timestamp="2019-07-23T19:59:36" time="19.488" tests="1">
-    <testcase classname="Connected Login Modal has the correct props" name="Connected Login Modal has the correct props" time="0.021">
+  <testsuite name="Connected Login Modal" errors="0" failures="0" skipped="0" timestamp="2019-07-24T19:23:22" time="19.827" tests="1">
+    <testcase classname="Connected Login Modal has the correct props" name="Connected Login Modal has the correct props" time="0.033">
     </testcase>
   </testsuite>
-  <testsuite name="App" errors="0" failures="0" skipped="0" timestamp="2019-07-23T19:59:36" time="24.099" tests="1">
-    <testcase classname="App renders the routes component" name="App renders the routes component" time="0.012">
+  <testsuite name="App" errors="0" failures="0" skipped="0" timestamp="2019-07-24T19:23:22" time="23.278" tests="1">
+    <testcase classname="App renders the routes component" name="App renders the routes component" time="0.011">
     </testcase>
   </testsuite>
-  <testsuite name="Connected Login Modal" errors="0" failures="0" skipped="0" timestamp="2019-07-23T19:59:36" time="24.135" tests="1">
-    <testcase classname="Connected Login Modal has the correct props" name="Connected Login Modal has the correct props" time="0.018">
+  <testsuite name="Connected Login Modal" errors="0" failures="0" skipped="0" timestamp="2019-07-24T19:23:22" time="23.304" tests="1">
+    <testcase classname="Connected Login Modal has the correct props" name="Connected Login Modal has the correct props" time="0.015">
     </testcase>
   </testsuite>
 </testsuites>
