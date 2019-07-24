@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { Formik, Field, Form, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
-import { Auth } from 'aws-amplify';
 import FormControl from '@material-ui/core/FormControl';
 import Input from '@material-ui/core/Input';
 import InputAdornment from '@material-ui/core/InputAdornment';
