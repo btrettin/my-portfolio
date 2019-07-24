@@ -33,6 +33,10 @@
 .greenHomeButton {
   color: #299e00 !important;
 }
+.greenHomeButton:hover {
+  color: #175a00 !important;
+  background-color: white !important;
+}
 .leftMenuDiv {
   display: flex !important;
   align-items: center !important;

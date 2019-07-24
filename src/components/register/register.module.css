@@ -19,14 +19,15 @@
 .loginButton {
   color: white !important;
   font-weight: bold !important;
+  border: 1px solid white !important;
 }
 .loginButtonBlack {
   color: #767676 !important;
   font-weight: bold !important;
+  border: 1px solid #767676 !important;
 }
 .loginButtonBlack:hover {
   color: #2c2c2c !important;
-  background-color: white !important;
 }
 .forgotPassword {
   color: blue !important;
