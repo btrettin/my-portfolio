@@ -53,7 +53,7 @@ const VerificationForm = (props) => {
           } catch (error) {
             console.log(error);
             let message = 'Email not associated with an account';
-            if (error.message === 'Invalid code provided, please request a code again.') {
+            if (error.message === 'Invalid verification code provided, please try again.') {
               message = 'Invalid Code';
             }
             actions.setFieldError('general', message);
