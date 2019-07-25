@@ -63,7 +63,7 @@ const ResetForm = props => (
           </div>
           <React.Fragment>
             <Button className={styles.submitButton} type="submit">
-              Send Email
+              Get Code
             </Button>
             <ErrorMessage>
               {() => <div className={styles.inputError}>{formikProps.errors.general}</div>}

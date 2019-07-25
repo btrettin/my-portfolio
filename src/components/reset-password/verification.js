@@ -6,14 +6,13 @@ import DialogActions from '@material-ui/core/DialogActions';
 import Dialog from '@material-ui/core/Dialog';
 import DialogContent from '@material-ui/core/DialogContent';
 import DialogTitle from '@material-ui/core/DialogTitle';
-import styles from './reset-password.module.css';
+import styles from './verification.module.css';
 import VerificationForm from './verification-form';
 
 const Verification = props => (
   <div>
     <Dialog
       open={props.isVerificationOpen}
-      onClose={props.toggleVerification}
       aria-labelledby="form-dialog-title"
       className={styles.Dialog}
     >
@@ -31,7 +30,7 @@ const Verification = props => (
           />
           <div className={styles.signupDiv}>
             <Button onClick={props.swapVerification} className={styles.signupButton}>
-              Back
+              Resend Code
             </Button>
           </div>
         </DialogContent>

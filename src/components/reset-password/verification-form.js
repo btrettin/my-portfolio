@@ -10,7 +10,7 @@ import Visibility from '@material-ui/icons/Visibility';
 import VisibilityOff from '@material-ui/icons/VisibilityOff';
 import Button from '@material-ui/core/Button';
 import InputLabel from '@material-ui/core/InputLabel';
-import styles from './reset-password-form.module.css';
+import styles from './verification-form.module.css';
 
 const initialValues = {
   code: '',
@@ -52,9 +52,9 @@ const VerificationForm = (props) => {
             return actions.setSubmitting(false);
           } catch (error) {
             console.log(error);
-            let message = 'Cannot create new password at this time';
-            if (error.message === 'User already exists') {
-              message = 'Email already associated with an account';
+            let message = 'Email not associated with an account';
+            if (error.message === 'Invalid code provided, please request a code again.') {
+              message = 'Invalid Code';
             }
             actions.setFieldError('general', message);
             return actions.setSubmitting(false);

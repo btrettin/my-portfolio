@@ -21,7 +21,7 @@ const ResetPassword = props => (
         <DialogTitle id="form-dialog-title" className={styles.modalHeader}>
           <h2 className={styles.headerText}> Reset Password </h2>
           <h3 className={styles.subHeaderText}>
-            Enter the email address associated with your account to receive a link to reset your
+            Enter the email address associated with your account to receive a code to reset your
             password
           </h3>
         </DialogTitle>
@@ -33,7 +33,7 @@ const ResetPassword = props => (
           />
           <div className={styles.signupDiv}>
             <Button onClick={props.swapResetPassword} className={styles.signupButton}>
-              Back
+              Back to Login
             </Button>
           </div>
         </DialogContent>
