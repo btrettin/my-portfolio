@@ -18,7 +18,6 @@ const HomePage = props => (
     </div>
   </Grid>
 );
-
 HomePage.propTypes = {
   history: PropTypes.func,
 };

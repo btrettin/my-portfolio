@@ -13,6 +13,8 @@ import styles from './navbar-desktop.module.css';
 import Steph from './steph.jpg';
 import RegisterModal from '../../../containers/connected-register';
 import LoginModal from '../../../containers/connected-login';
+import PasswordReset from '../../../containers/connected-reset-password';
+import Snackbar from '../../../containers/connected-snackbar';
 
 export const NavbarDesktop = (props) => {
   const [anchorEl, setAnchorEl] = useState(null);
@@ -129,6 +131,8 @@ export const NavbarDesktop = (props) => {
         <div className={styles.rightDiv}>
           <div className={styles.loginDiv}>
             <LoginWithRouter />
+            <PasswordReset />
+            <Snackbar />
           </div>
           <div className={styles.registerDiv}>
             <RegisterWithRouter />

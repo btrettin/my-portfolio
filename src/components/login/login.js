@@ -35,7 +35,7 @@ const LoginModal = props => (
             setUser={props.setUser}
             toggleLogin={props.toggleLogin}
           />
-          <button onClick={props.toggleLogin} className={styles.forgotPassword}>
+          <button onClick={props.swapResetPassword} className={styles.forgotPassword}>
             Forgot Password?
           </button>
           <div className={styles.signupDiv}>
@@ -58,6 +58,7 @@ const LoginModal = props => (
 );
 
 LoginModal.propTypes = {
+  swapResetPassword: PropTypes.func,
   location: PropTypes.func,
   swapModal: PropTypes.func,
   isLoginOpen: PropTypes.func,
@@ -67,6 +68,7 @@ LoginModal.propTypes = {
 };
 
 LoginModal.defaultProps = {
+  swapResetPassword: PropTypes.func,
   location: PropTypes.func,
   swapModal: PropTypes.func,
   isLoginOpen: PropTypes.func,
