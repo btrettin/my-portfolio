@@ -1,16 +1,15 @@
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import * as snackbarActions from '../../actions/snackbar';
-import Snackbar from '../../components/reset-password/snackbar';
+import * as verificationActions from '../../actions/verification';
+import Verification from '../../components/reset-password/verification';
 
 const mapStateToProps = state => ({
-  isSnackbarOpen: state.login.isSnackbarOpen,
   isVerificationOpen: state.login.isVerificationOpen,
 });
 const mapDispatchToProps = dispatch =>
   bindActionCreators(
     {
-      ...snackbarActions,
+      ...verificationActions,
     },
     dispatch,
   );
@@ -18,4 +17,4 @@ const mapDispatchToProps = dispatch =>
 export default connect(
   mapStateToProps,
   mapDispatchToProps,
-)(Snackbar);
+)(Verification);

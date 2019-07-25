@@ -15,6 +15,7 @@ import RegisterModal from '../../../containers/connected-register';
 import LoginModal from '../../../containers/connected-login';
 import PasswordReset from '../../../containers/connected-reset-password';
 import Snackbar from '../../../containers/connected-snackbar';
+import Verification from '../../../containers/connected-verification';
 
 export const NavbarDesktop = (props) => {
   const [anchorEl, setAnchorEl] = useState(null);
@@ -133,6 +134,7 @@ export const NavbarDesktop = (props) => {
             <LoginWithRouter />
             <PasswordReset />
             <Snackbar />
+            <Verification />
           </div>
           <div className={styles.registerDiv}>
             <RegisterWithRouter />

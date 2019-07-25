@@ -24,7 +24,7 @@ const ResetForm = props => (
         const username = values.email;
         try {
           await Auth.forgotPassword(username);
-          props.toggleResetPassword();
+          props.swapVerification();
           props.setSnackbar(true);
           return actions.setSubmitting(false);
         } catch (error) {

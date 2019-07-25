@@ -7,13 +7,13 @@ import Dialog from '@material-ui/core/Dialog';
 import DialogContent from '@material-ui/core/DialogContent';
 import DialogTitle from '@material-ui/core/DialogTitle';
 import styles from './reset-password.module.css';
-import ResetForm from './reset-password-form';
+import VerificationForm from './verification-form';
 
-const ResetPassword = props => (
+const Verification = props => (
   <div>
     <Dialog
-      open={props.isResetPasswordOpen}
-      onClose={props.toggleResetPassword}
+      open={props.isVerificationOpen}
+      onClose={props.toggleVerification}
       aria-labelledby="form-dialog-title"
       className={styles.Dialog}
     >
@@ -21,24 +21,22 @@ const ResetPassword = props => (
         <DialogTitle id="form-dialog-title" className={styles.modalHeader}>
           <h2 className={styles.headerText}> Reset Password </h2>
           <h3 className={styles.subHeaderText}>
-            Enter the email address associated with your account to receive a link to reset your
-            password
+            Enter the verification code sent to your email and choose your new password
           </h3>
         </DialogTitle>
         <DialogContent className={styles.loginContent}>
-          <ResetForm
-            swapVerification={props.swapVerification}
+          <VerificationForm
             setSnackbar={props.setSnackbar}
-            toggleResetPassword={props.toggleResetPassword}
+            toggleVerification={props.toggleVerification}
           />
           <div className={styles.signupDiv}>
-            <Button onClick={props.swapResetPassword} className={styles.signupButton}>
+            <Button onClick={props.swapVerification} className={styles.signupButton}>
               Back
             </Button>
           </div>
         </DialogContent>
         <DialogActions className={styles.modalAction}>
-          <Button onClick={props.toggleResetPassword} className={styles.closeButton}>
+          <Button onClick={props.toggleVerification} className={styles.closeButton}>
             <SvgIcon className={styles.closeIcon}>
               <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z" />
             </SvgIcon>
@@ -49,19 +47,17 @@ const ResetPassword = props => (
   </div>
 );
 
-ResetPassword.propTypes = {
-  swapVerification: PropTypes.func,
+Verification.propTypes = {
   setSnackbar: PropTypes.func,
-  isResetPasswordOpen: PropTypes.func,
-  toggleResetPassword: PropTypes.func,
-  swapResetPassword: PropTypes.func,
+  toggleVerification: PropTypes.func,
+  isVerificationOpen: PropTypes.func,
+  swapVerification: PropTypes.func,
 };
 
-ResetPassword.defaultProps = {
-  swapVerification: PropTypes.func,
+Verification.defaultProps = {
   setSnackbar: PropTypes.func,
-  isResetPasswordOpen: PropTypes.func,
-  toggleResetPassword: PropTypes.func,
-  swapResetPassword: PropTypes.func,
+  toggleVerification: PropTypes.func,
+  isVerificationOpen: PropTypes.func,
+  swapVerification: PropTypes.func,
 };
-export default ResetPassword;
+export default Verification;
