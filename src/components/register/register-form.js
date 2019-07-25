@@ -40,7 +40,8 @@ const SignupSchema = Yup.object().shape({
     .min(8, 'Must be at least 8 characters long')
     .matches(/[a-z]/, 'Must include 1 lower case letter')
     .matches(/[A-Z]/, 'Must include 1 upper case letter')
-    .matches(/[A-Z]/, 'Must include 1 number'),
+    .matches(/[A-Z]/, 'Must include 1 number')
+    .matches(/[0-9]/, 'Must include a number'),
 });
 const LoginFormComponent = (props) => {
   const [showPassword, set] = useState(false);
@@ -70,7 +71,11 @@ const LoginFormComponent = (props) => {
             props.setUser(user);
             return actions.setSubmitting(false);
           } catch (error) {
-            actions.setFieldError('general', error.message);
+            let message = 'Cannot create an account at this time';
+            if (error.message === 'User already exists') {
+              message = 'Email already associated with an account';
+            }
+            actions.setFieldError('general', message);
             return actions.setSubmitting(false);
           }
         }}

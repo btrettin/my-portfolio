@@ -39,7 +39,11 @@ const LoginFormComponent = (props) => {
             props.setUser(user);
             return actions.setSubmitting(false);
           } catch (error) {
-            actions.setFieldError('general', error.message);
+            let message = 'Incorrect Password';
+            if (error.message === 'User does not exist.') {
+              message = 'Email not associated with an account';
+            }
+            actions.setFieldError('general', message);
             return actions.setSubmitting(false);
           }
         }}
