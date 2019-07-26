@@ -16,6 +16,7 @@ import LoginModal from '../../../containers/connected-login';
 import PasswordReset from '../../../containers/connected-reset-password';
 import Snackbar from '../../../containers/connected-snackbar';
 import Verification from '../../../containers/connected-verification';
+import ConfirmModal from '../../../containers/connected-confirm';
 
 export const NavbarDesktop = (props) => {
   const [anchorEl, setAnchorEl] = useState(null);
@@ -84,6 +85,7 @@ export const NavbarDesktop = (props) => {
       </div>
       {props.isLoggedIn ? (
         <div className={styles.rightDiv}>
+          <ConfirmModal />
           <IconButton onClick={handleClick} className={styles.accountButton}>
             <Avatar src={Steph} className={styles.imageIcon} />
           </IconButton>

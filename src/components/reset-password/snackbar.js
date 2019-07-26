@@ -11,7 +11,7 @@ const SnackbarComponent = props => (
   <Snackbar
     className={styles.snackbar}
     anchorOrigin={{
-      vertical: 'bottom',
+      vertical: 'top',
       horizontal: 'left',
     }}
     open={props.isSnackbarOpen}
@@ -23,7 +23,7 @@ const SnackbarComponent = props => (
       message={
         <div className={styles.message}>
           <Checkmark className={styles.checkmark} />
-          {props.isVerificationOpen ? 'Email Successfully Sent!' : 'Password Successfully Reset!'}
+          Password Successfully Reset!
         </div>
       }
       action={[
@@ -35,13 +35,11 @@ const SnackbarComponent = props => (
   </Snackbar>
 );
 SnackbarComponent.propTypes = {
-  isVerificationOpen: PropTypes.func,
   setSnackbar: PropTypes.func,
   isSnackbarOpen: PropTypes.func,
 };
 
 SnackbarComponent.defaultProps = {
-  isVerificationOpen: PropTypes.func,
   setSnackbar: PropTypes.func,
   isSnackbarOpen: PropTypes.func,
 };

@@ -43,7 +43,7 @@ const SignupSchema = Yup.object().shape({
     .matches(/[A-Z]/, 'Must include 1 number')
     .matches(/[0-9]/, 'Must include a number'),
 });
-const LoginFormComponent = (props) => {
+const RegisterFormComponent = (props) => {
   const [showPassword, set] = useState(false);
   return (
     <div className={styles.formContainer}>
@@ -66,7 +66,7 @@ const LoginFormComponent = (props) => {
               },
             });
             console.log(user);
-            props.toggleRegister();
+            props.swapConfirm();
             props.setLoggedIn(true);
             props.setUser(user);
             return actions.setSubmitting(false);
@@ -211,4 +211,4 @@ const LoginFormComponent = (props) => {
     </div>
   );
 };
-export default LoginFormComponent;
+export default RegisterFormComponent;

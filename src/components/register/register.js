@@ -23,7 +23,7 @@ const RegisterModal = props => (
       open={props.isRegisterOpen}
       onClose={props.toggleRegister}
       aria-labelledby="form-dialog-title"
-      className={styles.Dialog}
+      className={styles.dialog}
     >
       <div className={styles.contentDiv}>
         <DialogTitle id="form-dialog-title" className={styles.modalHeader}>
@@ -33,7 +33,7 @@ const RegisterModal = props => (
           <RegisterForm
             setLoggedIn={props.setLoggedIn}
             setUser={props.setUser}
-            toggleRegister={props.toggleRegister}
+            swapConfirm={props.swapConfirm}
           />
           <div className={styles.signupDiv}>
             <h2 className={styles.signupText}>Already have an account?</h2>
@@ -53,8 +53,8 @@ const RegisterModal = props => (
     </Dialog>
   </div>
 );
-
 RegisterModal.propTypes = {
+  swapConfirm: PropTypes.func,
   location: PropTypes.func,
   swapModal: PropTypes.func,
   isRegisterOpen: PropTypes.func,
@@ -64,6 +64,7 @@ RegisterModal.propTypes = {
 };
 
 RegisterModal.defaultProps = {
+  swapConfirm: PropTypes.func,
   location: PropTypes.func,
   swapModal: PropTypes.func,
   isRegisterOpen: PropTypes.func,

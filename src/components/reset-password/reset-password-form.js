@@ -25,7 +25,6 @@ const ResetForm = props => (
         try {
           await Auth.forgotPassword(username);
           props.swapVerification();
-          props.setSnackbar(true);
           return actions.setSubmitting(false);
         } catch (error) {
           const message = 'Email Not Found';

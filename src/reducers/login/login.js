@@ -8,6 +8,7 @@ const getInitialState = () => ({
   isResetPasswordOpen: false,
   isSnackbarOpen: false,
   isVerificationOpen: false,
+  isConfirmOpen: false,
 });
 
 const setState = (previousState, property, newValue) =>
@@ -31,6 +32,8 @@ export default (state = getInitialState(), action) => {
       return setState(state, 'isVerificationOpen', !state.isVerificationOpen);
     case Actions.login.toggleResetPassword:
       return setState(state, 'isResetPasswordOpen', false);
+    case Actions.login.toggleConfirm:
+      return setState(state, 'isConfirmOpen', action.data);
     case Actions.login.swapModal:
       return setState({
         isLoginOpen: !state.isLoginOpen,
@@ -40,6 +43,7 @@ export default (state = getInitialState(), action) => {
         isLoggedIn: false,
         isSnackbarOpen: false,
         isVerificationOpen: false,
+        isConfirmOpen: false,
       });
     case Actions.login.swapResetPassword:
       return setState({
@@ -50,6 +54,7 @@ export default (state = getInitialState(), action) => {
         isLoggedIn: false,
         isSnackbarOpen: false,
         isVerificationOpen: false,
+        isConfirmOpen: false,
       });
     case Actions.login.swapVerification:
       return setState({
@@ -57,6 +62,18 @@ export default (state = getInitialState(), action) => {
         isResetPasswordOpen: !state.isResetPasswordOpen,
         isLoginOpen: false,
         isRegisterOpen: false,
+        user: null,
+        isLoggedIn: false,
+        isSnackbarOpen: false,
+        isConfirmOpen: false,
+      });
+    case Actions.login.swapConfirm:
+      return setState({
+        isConfirmOpen: !state.isConfirmOpen,
+        isRegisterOpen: !state.isRegisterOpen,
+        isVerificationOpen: false,
+        isResetPasswordOpen: false,
+        isLoginOpen: false,
         user: null,
         isLoggedIn: false,
         isSnackbarOpen: false,
