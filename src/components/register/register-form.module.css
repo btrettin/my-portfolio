@@ -44,10 +44,12 @@
   width: 100% !important;
   background-color: #299e00 !important;
   border: 0 !important;
-  height: 2.2em !important;
   font-size: 1.4em !important;
   border-radius: 5px !important;
   color: white !important;
   margin-top: 1em !important;
   margin-bottom: 0.2em !important;
+}
+.submitButton:hover {
+  background-color: #175a00 !important;
 }

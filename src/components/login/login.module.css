@@ -19,10 +19,12 @@
 .loginButton {
   color: white !important;
   font-weight: bold !important;
+  padding: 9px 10px !important;
 }
 .loginButtonBlack {
   color: #767676 !important;
   font-weight: bold !important;
+  padding: 9px 10px !important;
 }
 .loginButtonBlack:hover {
   color: #2c2c2c !important;
@@ -122,12 +124,9 @@
   padding-right: 0.5em !important;
 }
 .signupButton {
-  width: 5.3em !important;
-  height: 2.4em !important;
   background-color: white !important;
   border: 1px solid black !important;
-  border-radius: 0 !important;
-  padding: 3px 4px !important;
+  padding: 4px 8px !important;
   font-weight: bold !important;
   font-size: 1.2em !important;
 }

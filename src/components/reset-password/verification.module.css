@@ -126,12 +126,8 @@
   padding-right: 0.5em !important;
 }
 .signupButton {
-  width: 9em !important;
-  height: 2.4em !important;
   background-color: white !important;
   border: 1px solid black !important;
-  border-radius: 0 !important;
-  padding: 3px 4px !important;
   font-weight: bold !important;
-  font-size: 1.3em !important;
+  font-size: 1.2em !important;
 }
