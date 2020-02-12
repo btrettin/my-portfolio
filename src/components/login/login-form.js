@@ -117,7 +117,7 @@ const LoginFormComponent = (props) => {
             </div>
             <React.Fragment>
               <Button className={styles.submitButton} type="submit">
-                Log In
+                DONT PRESS THIS BUTTON
               </Button>
               <ErrorMessage>
                 {() => <div className={styles.inputError}>{formikProps.errors.general}</div>}
